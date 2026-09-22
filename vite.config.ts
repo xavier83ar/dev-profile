@@ -11,11 +11,16 @@ import { fileURLToPath, URL } from "node:url";
  * and gets the profile alone. Excluding the portfolio from the CV is structural
  * rather than a print rule that can rot.
  *
- * `base` must match the repository name, since the site is served from
- * https://xavier83ar.github.io/dev-profile/.
+ * `base` is "/" because the site is served from the custom domain
+ * https://javiermelero.com.ar/ at its root. GitHub Pages serves only from the
+ * custom domain once one is configured — https://xavier83ar.github.io/dev-profile/
+ * 301-redirects to it — so there is no second base path to support.
+ *
+ * If the custom domain is ever removed, this must go back to "/dev-profile/",
+ * and so must BASE in scripts/generate-pdf.mjs.
  */
 export default defineConfig({
-  base: "/dev-profile/",
+  base: "/",
   plugins: [vue(), tailwindcss()],
   resolve: {
     alias: { "@": fileURLToPath(new URL("./src", import.meta.url)) },

@@ -2,7 +2,7 @@
 
 My developer profile, and the CV it generates.
 
-Live at **https://xavier83ar.github.io/dev-profile/**
+Live at **https://javiermelero.com.ar**
 
 All content lives in [`src/data/profile.ts`](src/data/profile.ts). The site
 renders it as a profile page; the same data prints to a single-column,
@@ -76,10 +76,23 @@ Pushing to `main` builds, regenerates the PDF and publishes to GitHub Pages via
 [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml). Enable it once
 under **Settings → Pages → Source: GitHub Actions**.
 
-`base` in [`vite.config.ts`](vite.config.ts) is `/dev-profile/` and must match
-the repository name, or assets 404. It is also duplicated as `BASE` in
+### The custom domain, and why `base` is `/`
+
+The site is served from `javiermelero.com.ar` at its root, so `base` in
+[`vite.config.ts`](vite.config.ts) is `/`. It is duplicated as `BASE` in
 [`scripts/generate-pdf.mjs`](scripts/generate-pdf.mjs), which serves the build
-the same way Pages does.
+the same way Pages does — **change both together or the PDF renders an
+unstyled page**.
+
+Once a custom domain is configured, GitHub Pages serves only from it:
+`xavier83ar.github.io/dev-profile/` returns a 301 to the custom domain. There
+is no second base path to support, and a project-path build would 404 every
+asset on the custom domain. If the domain is ever dropped, both values go back
+to `/dev-profile/`.
+
+[`public/CNAME`](public/CNAME) is published with the build. The domain is also
+set in repository settings, but shipping it in the artifact means a deploy that
+replaces the whole site cannot drop it.
 
 ## Why Vue, when the CV sells Next.js
 

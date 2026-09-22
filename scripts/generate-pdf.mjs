@@ -29,7 +29,7 @@ const PUBLIC_PDF = fileURLToPath(new URL("../public/cv.pdf", import.meta.url));
 const PORT = Number(process.env.PDF_PORT ?? 4319);
 
 /** Must match `base` in vite.config.ts. */
-const BASE = "/dev-profile/";
+const BASE = "/";
 
 const MIME = {
   ".html": "text/html; charset=utf-8",
