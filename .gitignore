@@ -3,6 +3,7 @@ dist/
 *.tsbuildinfo
 .DS_Store
 .vite/
+.idea/
 
 # ─────────────────────────────────────────────────────────────────────────────
 # NEVER COMMIT. This repository is published to GitHub Pages, so anything

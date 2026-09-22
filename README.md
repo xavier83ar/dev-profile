@@ -86,7 +86,7 @@ the same way Pages does.
 Because this is a two-page static site. It has no server, no data fetching, no
 routing and no authentication — every problem Next.js is good at solving is
 absent here. Reaching for it would have said something worse about my judgement
-than Vue does about my React experience.
+than Vue does about my React experience. And because I love Vue.
 
 ## Stack
 
