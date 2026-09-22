@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { Profile } from "@/data/types";
-import BrandIcon from "./BrandIcon.vue";
+import Icon from "./Icon.vue";
 
 defineProps<{ profile: Profile }>();
 </script>
@@ -32,16 +32,18 @@ defineProps<{ profile: Profile }>();
       <li>
         <a
           :href="`mailto:${profile.email}`"
-          class="underline decoration-line underline-offset-4 transition hover:decoration-accent"
+          class="inline-flex items-center gap-1.5 underline decoration-line underline-offset-4 transition hover:text-accent-deep hover:decoration-accent"
         >
+          <Icon name="email" />
           {{ profile.email }}
         </a>
       </li>
       <li v-if="profile.phone">
         <a
           :href="`tel:${profile.phone.replace(/\s/g, '')}`"
-          class="underline decoration-line underline-offset-4 transition hover:decoration-accent"
+          class="inline-flex items-center gap-1.5 underline decoration-line underline-offset-4 transition hover:text-accent-deep hover:decoration-accent"
         >
+          <Icon name="phone" />
           {{ profile.phone }}
         </a>
       </li>
@@ -52,7 +54,7 @@ defineProps<{ profile: Profile }>();
           rel="noreferrer"
           class="inline-flex items-center gap-1.5 underline decoration-line underline-offset-4 transition hover:text-accent-deep hover:decoration-accent"
         >
-          <BrandIcon v-if="link.icon" :name="link.icon" />
+          <Icon v-if="link.icon" :name="link.icon" />
           {{ link.label }}
         </a>
       </li>
