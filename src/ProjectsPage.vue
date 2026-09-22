@@ -44,7 +44,7 @@ const base = import.meta.env.BASE_URL;
         :href="githubLink.url"
         target="_blank"
         rel="noreferrer"
-        class="mt-5 inline-block rounded-full border border-line px-4 py-2 text-sm font-medium transition hover:border-accent hover:text-accent"
+        class="mt-5 inline-block rounded-full border border-line px-4 py-2 text-sm font-medium transition hover:border-accent hover:text-accent-deep"
       >
         {{ githubLink.label }}
       </a>

@@ -56,7 +56,7 @@ const base = import.meta.env.BASE_URL;
         <a
           :href="`${base}cv.pdf`"
           download="javier-melero-cv.pdf"
-          class="rounded-full bg-accent px-3.5 py-1.5 text-sm font-medium text-bg transition hover:opacity-90"
+          class="rounded-full bg-accent-deep px-3.5 py-1.5 text-sm font-medium text-bg transition hover:opacity-90"
         >
           Download CV
         </a>

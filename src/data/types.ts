@@ -5,10 +5,15 @@
  * render these structures; they never contain sentences of their own.
  */
 
+/** Brands with a glyph in BrandIcon.vue. */
+export type BrandIconName = "github" | "linkedin";
+
 export type Link = {
   /** Shown as the link text. Printed in full in the PDF. */
   label: string;
   url: string;
+  /** Optional brand mark shown before the label. Screen only. */
+  icon?: BrandIconName;
 };
 
 export type SkillGroup = {

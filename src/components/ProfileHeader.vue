@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { Profile } from "@/data/types";
+import BrandIcon from "./BrandIcon.vue";
 
 defineProps<{ profile: Profile }>();
 </script>
@@ -9,7 +10,7 @@ defineProps<{ profile: Profile }>();
     <h1 class="text-4xl font-semibold tracking-tight sm:text-[2.75rem]">
       {{ profile.name }}
     </h1>
-    <p class="mt-1.5 text-lg font-medium text-accent sm:text-xl">{{ profile.title }}</p>
+    <p class="mt-1.5 text-lg font-medium text-accent-deep sm:text-xl">{{ profile.title }}</p>
     <p class="print-hide mt-3 max-w-2xl leading-relaxed text-muted">{{ profile.tagline }}</p>
 
     <dl class="mt-5 space-y-1 text-sm">
@@ -49,8 +50,9 @@ defineProps<{ profile: Profile }>();
           :href="link.url"
           target="_blank"
           rel="noreferrer"
-          class="underline decoration-line underline-offset-4 transition hover:decoration-accent"
+          class="inline-flex items-center gap-1.5 underline decoration-line underline-offset-4 transition hover:text-accent-deep hover:decoration-accent"
         >
+          <BrandIcon v-if="link.icon" :name="link.icon" />
           {{ link.label }}
         </a>
       </li>

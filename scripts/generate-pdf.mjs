@@ -116,6 +116,12 @@ function print(chrome) {
         "--disable-gpu",
         "--no-sandbox",
         "--no-pdf-header-footer",
+        // The page pulls Inter and DM Sans from Google Fonts. Without a virtual
+        // time budget Chrome can print before they arrive, silently falling
+        // back to the system face — the PDF looks fine in isolation, and wrong
+        // next to the site. This gives the fetch room without hanging the run.
+        "--virtual-time-budget=15000",
+        "--run-all-compositor-stages-before-draw",
         `--print-to-pdf=${DIST_PDF}`,
         `http://127.0.0.1:${PORT}${BASE}`,
       ],

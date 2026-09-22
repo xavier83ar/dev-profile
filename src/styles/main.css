@@ -13,8 +13,16 @@
   --text: #1a1815;
   --muted: #55504a;
   --subtle: #8a827a;
-  --accent: #1d5c4d;
   --chip: #f1eee8;
+
+  /* Two oranges, not one. `--accent` is the brand colour; `--accent-deep` is
+     the variant used wherever the accent carries *text*.
+     orange-600 on this background measures 3.4:1, which fails WCAG AA for
+     small text — and the section headings are 0.7rem. orange-700 measures
+     5.0:1 and passes. The brand colour still appears on bullet markers and
+     other decoration, where contrast minimums do not apply. */
+  --accent: oklch(64.6% 0.222 41.116);
+  --accent-deep: oklch(55.3% 0.195 38.402);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -25,8 +33,12 @@
     --text: #f2efe9;
     --muted: #b3aca2;
     --subtle: #867e75;
-    --accent: #79c6b0;
     --chip: #232119;
+
+    /* Inverted: on a near-black background the deep orange is too dim, so both
+       tokens move to a lighter tint. orange-400 measures 8.2:1 here. */
+    --accent: oklch(75.4% 0.176 57.507);
+    --accent-deep: oklch(75.4% 0.176 57.507);
   }
 }
 
@@ -37,8 +49,9 @@
   --text: #f2efe9;
   --muted: #b3aca2;
   --subtle: #867e75;
-  --accent: #79c6b0;
   --chip: #232119;
+  --accent: oklch(75.4% 0.176 57.507);
+  --accent-deep: oklch(75.4% 0.176 57.507);
 }
 
 @theme inline {
@@ -49,7 +62,14 @@
   --color-muted: var(--muted);
   --color-subtle: var(--subtle);
   --color-accent: var(--accent);
+  --color-accent-deep: var(--accent-deep);
   --color-chip: var(--chip);
+
+  /* Inter for running text, DM Sans for headings. Both are loaded from Google
+     Fonts in the page <head>; the stacks fall back to the system UI face so a
+     blocked or slow CDN degrades rather than breaks. */
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-display: "DM Sans", "Inter", ui-sans-serif, system-ui, sans-serif;
 }
 
 html {
@@ -60,8 +80,15 @@ html {
 body {
   background: var(--bg);
   color: var(--text);
+  font-family: var(--font-sans);
   font-feature-settings: "kern", "liga", "calt";
   text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
 }
 
 ::selection {
@@ -110,6 +137,7 @@ body {
     --muted: #1a1a1a;
     --subtle: #3a3a3a;
     --accent: #000000;
+    --accent-deep: #000000;
     --chip: #ffffff;
   }
 

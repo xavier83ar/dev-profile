@@ -25,8 +25,8 @@ export const profile: Profile = {
   phone: "+54 9 342 568 3612",
 
   links: [
-    { label: "linkedin.com/in/javier-melero", url: "https://www.linkedin.com/in/javier-melero/" },
-    { label: "github.com/xavier83ar", url: "https://github.com/xavier83ar" },
+    { label: "linkedin.com/in/javier-melero", url: "https://www.linkedin.com/in/javier-melero/", icon: "linkedin" },
+    { label: "github.com/xavier83ar", url: "https://github.com/xavier83ar", icon: "github" },
   ],
 
   summary:

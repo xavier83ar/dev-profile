@@ -29,7 +29,7 @@ defineProps<{ project: Project }>();
         :href="project.url"
         target="_blank"
         rel="noreferrer"
-        class="text-accent underline decoration-transparent underline-offset-4 transition hover:decoration-current"
+        class="text-accent-deep underline decoration-transparent underline-offset-4 transition hover:decoration-current"
       >
         Live
       </a>
@@ -38,7 +38,7 @@ defineProps<{ project: Project }>();
         :href="project.repo"
         target="_blank"
         rel="noreferrer"
-        class="text-accent underline decoration-transparent underline-offset-4 transition hover:decoration-current"
+        class="text-accent-deep underline decoration-transparent underline-offset-4 transition hover:decoration-current"
       >
         Source
       </a>
