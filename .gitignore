@@ -1,0 +1,21 @@
+node_modules/
+dist/
+*.tsbuildinfo
+.DS_Store
+.vite/
+
+# ─────────────────────────────────────────────────────────────────────────────
+# NEVER COMMIT. This repository is published to GitHub Pages, so anything
+# tracked here is public.
+#
+#   docs/   — the source material. DEVELOPER-PROFILE.md contains internal
+#             repository, product, team and client names, Jira IDs, a work
+#             email and quoted internal discussion. cv-ricardo-javier-melero.md
+#             contains a national ID number, date of birth and home address.
+#             The whole point of the rewrite in src/data/profile.ts was to keep
+#             all of that out of public view.
+#
+#   PLAN.md — quotes examples from both while explaining what was stripped.
+# ─────────────────────────────────────────────────────────────────────────────
+docs/
+PLAN.md

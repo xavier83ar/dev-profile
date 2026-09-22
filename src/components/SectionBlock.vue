@@ -1,0 +1,14 @@
+<script setup lang="ts">
+defineProps<{ id: string; title: string }>();
+</script>
+
+<template>
+  <section :id="id" class="mt-11">
+    <h2
+      class="mb-4 text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-accent"
+    >
+      {{ title }}
+    </h2>
+    <slot />
+  </section>
+</template>

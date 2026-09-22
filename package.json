@@ -1,0 +1,27 @@
+{
+  "name": "dev-profile",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Javier Melero — developer profile. One data source, rendered to web and to an ATS-readable CV PDF.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "typecheck": "vue-tsc --noEmit",
+    "pdf": "npm run build && node scripts/generate-pdf.mjs",
+    "pdf:verify": "pdftotext -layout public/cv.pdf -"
+  },
+  "dependencies": {
+    "vue": "^3.5.13"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.0.0",
+    "@types/node": "^26.6.2",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "tailwindcss": "^4.0.0",
+    "typescript": "~5.7.3",
+    "vite": "^6.0.11",
+    "vue-tsc": "^2.2.0"
+  }
+}

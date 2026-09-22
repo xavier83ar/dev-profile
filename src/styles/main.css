@@ -1,0 +1,315 @@
+@import "tailwindcss";
+
+/* ───────────────────────────────────────────────────────────────────────────
+   Tokens
+   A warm paper neutral and one deep accent. Both themes and the print sheet
+   draw from the same vocabulary.
+   ─────────────────────────────────────────────────────────────────────────── */
+
+:root {
+  --bg: #fbfaf8;
+  --surface: #ffffff;
+  --border: #e6e2da;
+  --text: #1a1815;
+  --muted: #55504a;
+  --subtle: #8a827a;
+  --accent: #1d5c4d;
+  --chip: #f1eee8;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #131210;
+    --surface: #1a1916;
+    --border: #2d2b25;
+    --text: #f2efe9;
+    --muted: #b3aca2;
+    --subtle: #867e75;
+    --accent: #79c6b0;
+    --chip: #232119;
+  }
+}
+
+:root[data-theme="dark"] {
+  --bg: #131210;
+  --surface: #1a1916;
+  --border: #2d2b25;
+  --text: #f2efe9;
+  --muted: #b3aca2;
+  --subtle: #867e75;
+  --accent: #79c6b0;
+  --chip: #232119;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-line: var(--border);
+  --color-text: var(--text);
+  --color-muted: var(--muted);
+  --color-subtle: var(--subtle);
+  --color-accent: var(--accent);
+  --color-chip: var(--chip);
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-feature-settings: "kern", "liga", "calt";
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ───────────────────────────────────────────────────────────────────────────
+   PRINT / PDF
+   The screen renders a profile page; print renders a CV. Every rule below
+   exists to survive an applicant tracking system's text extraction, and each
+   was verified by running pdftotext back over the generated PDF.
+   ─────────────────────────────────────────────────────────────────────────── */
+
+@page {
+  size: Letter;
+  margin: 12mm 13mm 13mm;
+}
+
+@media print {
+  :root,
+  :root[data-theme="dark"],
+  :root[data-theme="light"] {
+    --bg: #ffffff;
+    --surface: #ffffff;
+    --border: #bbbbbb;
+    --text: #000000;
+    --muted: #1a1a1a;
+    --subtle: #3a3a3a;
+    --accent: #000000;
+    --chip: #ffffff;
+  }
+
+  html,
+  body {
+    background: #fff !important;
+    color: #000 !important;
+    font-size: 9.6pt;
+    line-height: 1.29;
+  }
+
+  /* Navigation, buttons, decoration: gone. */
+  .no-print {
+    display: none !important;
+  }
+
+  /* Collapse the reading layout to a single flowing column. */
+  .print-flat {
+    display: block !important;
+    max-width: none !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    background: #fff !important;
+    gap: 0 !important;
+  }
+
+  /* Keep short, self-contained blocks whole — a qualification, a skill row,
+     the header. Long experience entries deliberately do NOT get this: a role
+     with seven bullets cannot fit in a partial page, so forcing it whole left
+     ~70pt of dead space at the foot of a page and pushed the CV to three. They
+     flow instead, with `li` and heading rules below preventing the breaks that
+     actually look bad. */
+  .print-keep {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  h1,
+  h2,
+  h3 {
+    break-after: avoid;
+    page-break-after: avoid;
+    color: #000 !important;
+  }
+
+  h1 {
+    font-size: 17pt;
+    letter-spacing: -0.01em;
+  }
+
+  h2 {
+    font-size: 10pt;
+    /* No tracking: at wide letter-spacing, extractors insert a space and
+       "EXPERIENCE" comes out as "E XPERIENCE". */
+    letter-spacing: 0 !important;
+    text-transform: uppercase;
+    border-bottom: 0.5pt solid #000;
+    padding-bottom: 2pt;
+    margin: 6pt 0 2.5pt !important;
+  }
+
+  h3 {
+    font-size: 10.1pt;
+  }
+
+  ul {
+    margin: 2pt 0 0;
+  }
+
+  li {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  p {
+    orphans: 2;
+    widows: 2;
+  }
+
+  section {
+    margin-top: 0 !important;
+  }
+
+  /* Screen spacing is generous by design; print has a page budget. Tailwind's
+     vertical rhythm is applied through `space-y-*` (a margin on each following
+     sibling), so it is neutralised wholesale here and re-set to print values.
+     Doing it by attribute selector rather than per component means a new
+     component cannot quietly reintroduce screen spacing into the CV. */
+  [class*="space-y-"] > * + * {
+    margin-top: 2pt !important;
+  }
+
+  .print-compact > * + * {
+    margin-top: 3pt !important;
+  }
+
+  li + li {
+    margin-top: 1pt !important;
+  }
+
+  p {
+    margin: 0 !important;
+  }
+
+  h3 {
+    margin: 0 !important;
+  }
+
+  /* Anything laid out in columns collapses to one. A two-column grid extracts
+     out of reading order — the second column's text interleaves with the
+     first — which is exactly what an ATS mis-parses. */
+  .print-stack {
+    display: block !important;
+    gap: 0 !important;
+  }
+
+  .print-stack > * + * {
+    margin-top: 3pt !important;
+  }
+
+  /* Screen-only content. Two things carry this:
+       · the tagline, which restates the opening of the summary
+       · the per-role "Stack:" lines, whose keywords all appear in the Skills
+         section and in the role bullets themselves
+     Both earn their place on screen. On paper they cost four lines, which is
+     the difference between a two- and a three-page CV. */
+  .print-hide {
+    display: none !important;
+  }
+
+  /* Chips become "React, Next.js, TypeScript" — a grid of styled boxes
+     extracts scrambled, and commas read as keyword delimiters. */
+  .print-inline-list {
+    display: block !important;
+  }
+
+  .print-inline-list > * {
+    display: inline !important;
+    background: none !important;
+    border: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    font-size: inherit !important;
+    color: #000 !important;
+    border-radius: 0 !important;
+  }
+
+  .print-inline-list > *:not(:last-child)::after {
+    content: ", ";
+  }
+
+  /* A skill group prints as one line: "Frontend: TypeScript, Next.js, …" */
+  .print-row {
+    display: block !important;
+    margin-bottom: 2.5pt !important;
+  }
+
+  .print-row > h3 {
+    display: inline !important;
+    font-size: inherit !important;
+    font-weight: 700 !important;
+  }
+
+  .print-row > h3::after {
+    content: ": ";
+  }
+
+  .print-row > ul {
+    display: inline !important;
+    margin: 0 !important;
+  }
+
+  /* An education or language entry is a stack of short lines on screen, which
+     wastes four lines of page budget on what is reference information. In
+     print each entry collapses to one flowing sentence. */
+  .print-entry > * {
+    display: inline !important;
+    margin: 0 !important;
+    font-size: inherit !important;
+  }
+
+  .print-entry > * + *::before {
+    content: " · ";
+    color: #444;
+  }
+
+  /* A printed CV cannot be clicked, so spell the destination out. */
+  .print-url::after {
+    content: " (" attr(data-url) ")";
+    font-size: 8.4pt;
+    color: #333;
+    word-break: break-all;
+  }
+
+  a {
+    text-decoration: none !important;
+    color: #000 !important;
+  }
+}
