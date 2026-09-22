@@ -19,6 +19,7 @@ export const profile: Profile = {
     "Nineteen years building for the web. I own features end to end — data model, API, interface, and the infrastructure that serves them.",
 
   location: "Santa Fe, Argentina",
+  photo: "profile-photo.jpg",
   timezone: "UTC-3 — full overlap with US business hours",
   availability: "Open to remote roles · Available as an independent contractor",
   email: "ricmelero@gmail.com",

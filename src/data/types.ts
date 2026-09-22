@@ -78,6 +78,12 @@ export type Profile = {
   /** The pitch, in roughly fifteen words. */
   tagline: string;
   location: string;
+  /**
+   * Filename of a square portrait in `public/`, resolved against the site base.
+   * Screen only — it is deliberately kept off the CV, where a photo invites
+   * the bias that US hiring convention exists to avoid.
+   */
+  photo?: string;
   /** Stated explicitly: for a remote hire outside the US it is a selling point. */
   timezone: string;
   /** Availability and engagement model. */

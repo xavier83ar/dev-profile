@@ -3,14 +3,41 @@ import type { Profile } from "@/data/types";
 import Icon from "./Icon.vue";
 
 defineProps<{ profile: Profile }>();
+
+const base = import.meta.env.BASE_URL;
 </script>
 
 <template>
   <header class="print-keep">
-    <h1 class="text-4xl font-semibold tracking-tight sm:text-[2.75rem]">
-      {{ profile.name }}
-    </h1>
-    <p class="mt-1.5 text-lg font-medium text-accent-deep sm:text-xl">{{ profile.title }}</p>
+    <div class="flex items-center gap-4 sm:gap-5">
+      <!--
+        Screen only. On the CV a photo reveals age, race and gender before a
+        word is read, which is why US hiring convention omits it and why some
+        recruiters discard résumés that carry one.
+
+        Eager, not lazy: it is above the fold and a likely LCP element, so
+        deferring it would delay the metric rather than help it. Intrinsic
+        dimensions are declared even though CSS fixes the box, so the space is
+        reserved if the file is slow or missing.
+      -->
+      <img
+        v-if="profile.photo"
+        :src="`${base}${profile.photo}`"
+        alt=""
+        width="400"
+        height="400"
+        decoding="async"
+        class="no-print size-20 shrink-0 rounded-full object-cover ring-1 ring-line sm:size-24"
+      />
+      <div>
+        <h1 class="text-4xl font-semibold tracking-tight sm:text-[2.75rem]">
+          {{ profile.name }}
+        </h1>
+        <p class="mt-1 text-lg font-medium text-accent-deep sm:text-xl">
+          {{ profile.title }}
+        </p>
+      </div>
+    </div>
     <p class="print-hide mt-3 max-w-2xl leading-relaxed text-muted">{{ profile.tagline }}</p>
 
     <dl class="mt-5 space-y-1 text-sm">
