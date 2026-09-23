@@ -104,6 +104,11 @@ export type Profile = {
     description: string;
     groups: SkillGroup[];
   };
+  /**
+   * How AI fits into daily work and shipped features — one or two short
+   * paragraphs, rendered directly under Skills.
+   */
+  ai: string[];
   /** Most recent first. */
   experience: Role[];
   education: Education[];

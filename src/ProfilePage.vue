@@ -23,6 +23,10 @@ import SiteFooter from "@/components/SiteFooter.vue";
       <SkillGroups :description="profile.skills.description" :groups="profile.skills.groups" />
     </SectionBlock>
 
+    <SectionBlock id="ai" title="AI">
+      <p class="max-w-3xl leading-relaxed text-muted mb-3" v-for="paragraph of profile.ai">{{ paragraph }}</p>
+    </SectionBlock>
+
     <SectionBlock id="experience" title="Experience">
       <ExperienceList :roles="profile.experience" />
     </SectionBlock>

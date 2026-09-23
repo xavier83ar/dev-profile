@@ -124,6 +124,11 @@ export const profile: Profile = {
     ]
   },
 
+  ai: [
+    "AI is part of how I build software day to day, not a novelty I bolt on. Claude Code is my primary tool for analysis, technical design and implementation — I use it to draft RFCs, review code and work through cross-repo changes, and I'm comfortable writing agent skills and prompt-driven workflows rather than just prompting ad hoc.",
+    "I've also built AI into the product, not just around it. At Pager Health I worked on member-facing conversational agents, first on Dialogflow and later migrated to Google's Agent Development Kit (ADK), with a Python service connecting them to the rest of the platform. More recently I helped ship an AI-powered search experience for our provider-search product, using Gemini 3.1 Flash Lite as the model behind it.",
+  ],
+
   experience: [
     {
       company: "Pager Health",
