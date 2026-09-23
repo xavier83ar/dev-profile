@@ -9,7 +9,6 @@ const base = import.meta.env.BASE_URL;
 </script>
 
 <template>
-  <!-- Screen-only chrome. The PDF is the CV; none of this belongs in it. -->
   <nav class="no-print sticky top-0 z-50 border-b border-line bg-bg/85 backdrop-blur">
     <div class="mx-auto flex max-w-3xl items-center justify-between gap-4 px-4 py-3 sm:px-8">
       <div class="flex items-center gap-1 text-sm">
@@ -46,7 +45,7 @@ const base = import.meta.env.BASE_URL;
           class="rounded-full border border-line px-2.5 py-1.5 text-sm text-muted transition hover:text-text"
           @click="toggle"
         >
-          <span aria-hidden>{{ ready && theme === "dark" ? "☀" : "☾" }}</span>
+          <span aria-hidden="true">{{ ready && theme === "dark" ? "☀" : "☾" }}</span>
         </button>
 
         <!--

@@ -1,17 +1,5 @@
 import type { Profile } from "./types";
 
-/**
- * ─────────────────────────────────────────────────────────────────────────────
- *  THIS FILE IS THE CV.
- *
- *  Sourced from docs/cv-ricardo-javier-melero.md and docs/DEVELOPER-PROFILE.md.
- *  Privacy rules applied (PLAN.md §3): no internal repository, product, team or
- *  client names. Vendors, employers and activity metrics are kept.
- *
- *  Anything marked TODO: needs your input. Grep for it before publishing.
- * ─────────────────────────────────────────────────────────────────────────────
- */
-
 export const profile: Profile = {
   name: "Javier Melero",
   title: "Lead Web Engineer",

@@ -5,14 +5,6 @@ const REPO_URL = "https://github.com/xavier83ar/dev-profile";
 </script>
 
 <template>
-  <!--
-    Screen only — a credits line has nothing to do in a CV. Three groups,
-    centred, with generous space between them so they read as separate credits
-    rather than one run-on sentence. Icons carry currentColor rather than each
-    brand's own colour, matching the muted/no-brand-colour treatment used for
-    the contact and social icons elsewhere on the page; each link's name comes
-    from aria-label since the icon is the only thing inside the anchor.
-  -->
   <footer class="no-print border-t border-line">
     <div
       class="mx-auto flex max-w-3xl flex-wrap items-center justify-center gap-x-10 gap-y-3 px-4 py-10 text-sm text-subtle sm:px-8"

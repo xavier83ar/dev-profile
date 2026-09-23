@@ -10,16 +10,6 @@ const base = import.meta.env.BASE_URL;
 <template>
   <header class="print-keep">
     <div class="flex items-center gap-4 sm:gap-5">
-      <!--
-        Screen only. On the CV a photo reveals age, race and gender before a
-        word is read, which is why US hiring convention omits it and why some
-        recruiters discard résumés that carry one.
-
-        Eager, not lazy: it is above the fold and a likely LCP element, so
-        deferring it would delay the metric rather than help it. Intrinsic
-        dimensions are declared even though CSS fixes the box, so the space is
-        reserved if the file is slow or missing.
-      -->
       <img
         v-if="profile.photo"
         :src="`${base}${profile.photo}`"
@@ -44,7 +34,7 @@ const base = import.meta.env.BASE_URL;
       <div class="flex flex-wrap items-baseline gap-x-2">
         <dt class="sr-only">Location</dt>
         <dd class="text-muted">{{ profile.location }}</dd>
-        <dd aria-hidden class="text-subtle">·</dd>
+        <dd aria-hidden="true" class="text-subtle">·</dd>
         <dt class="sr-only">Timezone</dt>
         <!-- Stated plainly: for a remote hire outside the US this is an asset. -->
         <dd class="font-medium text-text">{{ profile.timezone }}</dd>
