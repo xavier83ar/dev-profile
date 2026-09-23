@@ -75,6 +75,14 @@ const base = import.meta.env.BASE_URL;
           {{ link.label }}
         </a>
       </li>
+      <li>
+        <a
+            href="https://javiermelero.com.ar/"
+            class="hidden print:inline-flex items-center gap-1.5 underline decoration-line underline-offset-4 transition hover:text-accent-deep hover:decoration-accent"
+        >
+          javiermelero.com.ar
+        </a>
+      </li>
     </ul>
   </header>
 </template>

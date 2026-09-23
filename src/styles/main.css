@@ -122,8 +122,8 @@ h3 {
    ─────────────────────────────────────────────────────────────────────────── */
 
 @page {
-  size: Letter;
-  margin: 12mm 13mm 13mm;
+  size: A4;
+  margin: 20mm 25mm 15mm;
 }
 
 @media print {
@@ -147,6 +147,7 @@ h3 {
     color: #000 !important;
     font-size: 9.6pt;
     line-height: 1.29;
+    margin: .5rem;
   }
 
   /* Navigation, buttons, decoration: gone. */
