@@ -6,6 +6,7 @@ import SectionBlock from "@/components/SectionBlock.vue";
 import SkillGroups from "@/components/SkillGroups.vue";
 import ExperienceList from "@/components/ExperienceList.vue";
 import EducationLanguages from "@/components/EducationLanguages.vue";
+import SiteFooter from "@/components/SiteFooter.vue";
 </script>
 
 <template>
@@ -33,4 +34,6 @@ import EducationLanguages from "@/components/EducationLanguages.vue";
       />
     </SectionBlock>
   </main>
+
+  <SiteFooter />
 </template>

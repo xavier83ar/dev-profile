@@ -3,6 +3,7 @@ import { profile } from "@/data/profile";
 import { projects } from "@/data/projects";
 import SiteNav from "@/components/SiteNav.vue";
 import ProjectCard from "@/components/ProjectCard.vue";
+import SiteFooter from "@/components/SiteFooter.vue";
 
 const githubLink = profile.links.find((link) => link.url.includes("github.com"));
 const base = import.meta.env.BASE_URL;
@@ -50,4 +51,6 @@ const base = import.meta.env.BASE_URL;
       </a>
     </div>
   </main>
+
+  <SiteFooter />
 </template>

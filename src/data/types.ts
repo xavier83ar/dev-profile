@@ -6,7 +6,14 @@
  */
 
 /** Glyphs available in Icon.vue. */
-export type IconName = "github" | "linkedin" | "email" | "phone";
+export type IconName =
+  | "github"
+  | "linkedin"
+  | "email"
+  | "phone"
+  | "claude"
+  | "vue"
+  | "tailwind";
 
 export type Link = {
   /** Shown as the link text. Printed in full in the PDF. */
