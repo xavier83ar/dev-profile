@@ -53,7 +53,7 @@ const REPO_URL = "https://github.com/xavier83ar/dev-profile";
       </span>
 
       <span class="inline-flex items-center gap-2">
-        Check source code
+        Source code
         <a
           :href="REPO_URL"
           target="_blank"
