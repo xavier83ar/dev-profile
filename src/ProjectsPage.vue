@@ -22,7 +22,7 @@ const base = import.meta.env.BASE_URL;
           :href="base"
           class="underline decoration-line underline-offset-4 transition hover:decoration-accent"
           >profile page</a
-        >; what follows is what I can point at directly.
+        >.
       </p>
     </header>
 
@@ -35,10 +35,9 @@ const base = import.meta.env.BASE_URL;
       v-else
       class="mt-10 rounded-lg border border-dashed border-line px-6 py-12 text-center"
     >
-      <p class="font-medium">Being written up.</p>
+      <p class="font-medium">Work in progress.</p>
       <p class="mx-auto mt-2 max-w-md leading-relaxed text-muted">
-        I am putting these together properly rather than posting a list of
-        repository names. In the meantime, the code is public.
+        Meanwhile you can check my github profile.
       </p>
       <a
         v-if="githubLink"
