@@ -92,8 +92,11 @@ export type Profile = {
   phone?: string;
   links: Link[];
   /** Three or four sentences, for a hiring manager skimming in eight seconds. */
-  summary: string;
-  skills: SkillGroup[];
+  summary: string[];
+  skills: {
+    description: string;
+    groups: SkillGroup[];
+  };
   /** Most recent first. */
   experience: Role[];
   education: Education[];

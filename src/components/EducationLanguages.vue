@@ -24,7 +24,7 @@ defineProps<{ education: Education[]; languages: Language[] }>();
         <li v-for="language in languages" :key="language.name" class="print-entry print-keep">
           <p class="text-sm">
             <span class="font-medium">{{ language.name }}</span>
-            <span class="text-muted"> — {{ language.level }}</span>
+            <span> — {{ language.level }}</span>
           </p>
           <p v-if="language.detail" class="mt-0.5 text-sm text-muted">
             {{ language.detail }}

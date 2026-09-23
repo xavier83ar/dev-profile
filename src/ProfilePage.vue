@@ -15,15 +15,15 @@ import EducationLanguages from "@/components/EducationLanguages.vue";
     <ProfileHeader :profile="profile" />
 
     <SectionBlock id="summary" title="Profile">
-      <p class="max-w-3xl leading-relaxed text-muted">{{ profile.summary }}</p>
+      <p class="max-w-3xl leading-relaxed text-muted mb-3" v-for="summaryLine of profile.summary">{{ summaryLine }}</p>
+    </SectionBlock>
+
+    <SectionBlock id="skills" title="Skills">
+      <SkillGroups :description="profile.skills.description" :groups="profile.skills.groups" />
     </SectionBlock>
 
     <SectionBlock id="experience" title="Experience">
       <ExperienceList :roles="profile.experience" />
-    </SectionBlock>
-
-    <SectionBlock id="skills" title="Skills">
-      <SkillGroups :groups="profile.skills" />
     </SectionBlock>
 
     <SectionBlock id="education" title="Education & Languages">

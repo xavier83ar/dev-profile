@@ -1,11 +1,12 @@
 <script setup lang="ts">
 import type { SkillGroup } from "@/data/types";
 
-defineProps<{ groups: SkillGroup[] }>();
+defineProps<{ description: string; groups: SkillGroup[] }>();
 </script>
 
 <template>
   <div class="print-compact space-y-3.5">
+    <p class="max-w-3xl leading-relaxed text-muted mb-3">{{ description }}</p>
     <div
       v-for="group in groups"
       :key="group.group"
