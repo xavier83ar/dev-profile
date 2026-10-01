@@ -6,7 +6,7 @@
   "description": "Javier Melero — developer profile. One data source, rendered to web and to an ATS-readable CV PDF.",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build",
+    "build": "vue-tsc --noEmit && vite build && node scripts/render-static.mjs",
     "preview": "vite preview",
     "typecheck": "vue-tsc --noEmit",
     "pdf": "npm run build && node scripts/generate-pdf.mjs",
