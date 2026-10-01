@@ -30,11 +30,6 @@ const PATHS: Record<IconName, string> = {
 </script>
 
 <template>
-  <!--
-    Decorative: the text beside it already names the destination, so the icon is
-    hidden from assistive technology rather than repeating it. Hidden in print
-    too — on paper it is clutter next to a spelled-out address.
-  -->
   <svg
     class="no-print inline-block size-[1.05em] shrink-0 align-[-0.15em]"
     viewBox="0 0 24 24"

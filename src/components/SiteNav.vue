@@ -48,10 +48,6 @@ const base = import.meta.env.BASE_URL;
           <span aria-hidden="true">{{ ready && theme === "dark" ? "☀" : "☾" }}</span>
         </button>
 
-        <!--
-          Links to the generated file rather than calling window.print(), so a
-          visitor downloads the exact PDF that was built and verified.
-        -->
         <a
           :href="`${base}cv.pdf`"
           download="javier-melero-cv.pdf"

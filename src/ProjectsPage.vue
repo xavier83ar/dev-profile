@@ -29,8 +29,6 @@ const base = import.meta.env.BASE_URL;
     <div v-if="projects.length" class="mt-10 grid gap-5 sm:grid-cols-2">
       <ProjectCard v-for="project in projects" :key="project.name" :project="project" />
     </div>
-
-    <!-- Empty state: the page ships before the content does. -->
     <div
       v-else
       class="mt-10 rounded-lg border border-dashed border-line px-6 py-12 text-center"

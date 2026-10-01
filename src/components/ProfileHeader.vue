@@ -36,7 +36,6 @@ const base = import.meta.env.BASE_URL;
         <dd class="text-muted">{{ profile.location }}</dd>
         <dd aria-hidden="true" class="text-subtle">·</dd>
         <dt class="sr-only">Timezone</dt>
-        <!-- Stated plainly: for a remote hire outside the US this is an asset. -->
         <dd class="font-medium text-text">{{ profile.timezone }}</dd>
       </div>
       <div>
