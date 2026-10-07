@@ -13,7 +13,8 @@ export type IconName =
   | "phone"
   | "claude"
   | "vue"
-  | "tailwind";
+  | "tailwind"
+  | "company";
 
 export type Link = {
   /** Shown as the link text. Printed in full in the PDF. */
@@ -32,23 +33,34 @@ export type SkillGroup = {
   items: string[];
 };
 
+/** A single title held within a company, for companies with more than one. */
 export type Role = {
-  company: string;
   title: string;
-  /** e.g. "Remote — US company" */
-  location: string;
   /** "YYYY-MM" for sorting and for the printed range. */
   start: string;
   /** "YYYY-MM", or null while current. */
   end: string | null;
-  /** One or two sentences of context: what the company does, what you owned. */
-  summary: string;
+  /** Context specific to this title, where it differs from the company summary. */
+  summary?: string;
   /**
    * Achievement bullets, each carrying a result. Older roles may have none —
    * the further back it is, the less space it earns.
    */
   highlights?: string[];
+};
+
+export type Experience = {
+  company: string;
+  /** e.g. "Remote — US company" */
+  location: string;
+  /** One or two sentences of context: what the company does, what you owned. */
+  summary: string;
+  highlights?: string[];
   stack?: string[];
+  /** Most recent first. A company with one title has a single entry here. */
+  roles: Role[];
+  /** Relative path of a logo image in `public/`, resolved against the site base. */
+  logo?: string;
 };
 
 export type Project = {
@@ -110,7 +122,7 @@ export type Profile = {
    */
   ai: string[];
   /** Most recent first. */
-  experience: Role[];
+  experience: Experience[];
   education: Education[];
   languages: Language[];
 };

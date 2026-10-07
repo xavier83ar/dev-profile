@@ -132,25 +132,37 @@ export const profile: Profile = {
   experience: [
     {
       company: "Pager Health",
-      title: "Lead Web Engineer",
       location: "Remote — US company",
-      start: "2021-06",
-      end: "2026-09",
-      summary:
-        "US digital-health company building virtual-care products for enterprise health plans and insurers. " +
-        "I led the web engineering for a provider-search and appointment-scheduling product, " +
-        "and worked across the member-facing SDK, the agent command center, the backend services " +
-        "and the infrastructure behind them.",
-      highlights: [
-        "Led web engineering for a provider-search and appointment-scheduling application: authored the provider " +
-          "data-model RFC, implemented it, built the member-facing UI, and provisioned the Cloud Run service, Terraform modules and " +
-          "delivery pipelines to production.",
-        "Migrated member and agent video calling from Twilio to the Zoom Video SDK across five services, covering SDK" +
-          " core, embedded widget, agent console, Helm CSP policy and external consumer documentation.",
-        "Built and maintained an embeddable patient SDK, consumed by enterprise health-plan clients.",
-        "Authored the company's internationalisation standard, then implemented it across backend and frontend services, adding Spanish and Portuguese for Latin-American and Brazilian markets.",
-        "Delivered WhatsApp Business as a member communication channel end to end across seven services: Twilio templated messages, configuration UI, routing and agent send flow.",
+      logo: "logos/experience/pager-health-logo.png",
+      roles: [
+        {
+          title: "Staff Engineer",
+          start: "2026-03",
+          end: "2026-09",
+          summary: "Authored the company's internationalization standard, then implemented it across backend and frontend services, adding Spanish and Portuguese for Latin-American and Brazilian markets.",
+        },
+        {
+          title: "Lead Web Engineer",
+          start: "2022-10",
+          end: "2026-02",
+          highlights: [
+            "Led web engineering for a provider-search and appointment-scheduling application: authored the provider " +
+            "data-model RFC, implemented it, built the member-facing UI, and provisioned the Cloud Run service, Terraform modules and " +
+            "delivery pipelines to production.",
+            "Migrated member and agent video calling from Twilio to the Zoom Video SDK across five services, covering SDK" +
+            " core, embedded widget, agent console, Helm CSP policy and external consumer documentation.",
+            "Delivered WhatsApp Business as a member communication channel end to end across seven services: Twilio templated messages, configuration UI, routing and agent send flow.",
+          ],
+        },
+        {
+          title: "Senior Front-end Engineer",
+          start: "2021-06",
+          end: "2022-09",
+          summary: "Built and maintained an embeddable patient SDK, consumed by enterprise health-plan clients.",
+        },
       ],
+      summary:
+        "US digital-health company building virtual-care products for enterprise health plans and insurers.",
       stack: [
         "TypeScript",
         "Next.js",
@@ -165,10 +177,8 @@ export const profile: Profile = {
     },
     {
       company: "Soluciones yPunto",
-      title: "Partner & CTO",
       location: "Santa Fe, Argentina",
-      start: "2016-01",
-      end: "2021-06",
+      roles: [{ title: "Partner & CTO", start: "2016-01", end: "2021-06" }],
       summary:
         "Formed when the software-development branch of Linked Comunicaciones merged with Soluciones yPunto, giving " +
         "the combined company the capacity to take on larger clients. I set technical direction and led delivery.",
@@ -178,13 +188,12 @@ export const profile: Profile = {
         "Developed complete solutions including: public website, web apps (pwa), mobile apps (android and ios), internal admin tools, backend, api's, databases and the infrastructure that serves them.",
       ],
       stack: ["PHP", "CakePHP", "Symfony", "JavaScript", "Vue", "MySQL", "Linux", "Docker"],
+      logo: 'logos/experience/soluciones-ypunto.png',
     },
     {
       company: "Linked Comunicaciones",
-      title: "Founding Partner & CTO",
       location: "Santa Fe, Argentina",
-      start: "2010-01",
-      end: "2016-01",
+      roles: [{ title: "Founding Partner & CTO", start: "2010-01", end: "2016-01" }],
       summary:
         "A startup founded with university friends providing web development and hosting to local companies, with clients across gaming, construction and local government.",
       highlights: [
@@ -195,10 +204,8 @@ export const profile: Profile = {
     },
     {
       company: "Eniti Media SL (former Cenys Network SL)(extinct)",
-      title: "Project Manager",
       location: "Málaga, Spain / Santo Tomé, Argentina",
-      start: "2008-01",
-      end: "2010-01",
+      roles: [{ title: "Project Manager", start: "2008-01", end: "2010-01" }],
       summary:
         "Ran the web development department for a Spanish media company, working across two countries.",
       highlights: [
@@ -210,10 +217,10 @@ export const profile: Profile = {
     },
     {
       company: "Universidad Tecnológica Nacional",
-      title: "Systems Administrator & Research Assistant",
       location: "Santa Fe, Argentina",
-      start: "2007-01",
-      end: "2007-12",
+      roles: [
+        { title: "Systems Administrator & Research Assistant", start: "2007-01", end: "2007-12" },
+      ],
       summary:
         "Network administration and configuration at the university's connectivity labs, alongside a research position in a math-applied program.",
     },

@@ -28,7 +28,7 @@ import SiteFooter from "@/components/SiteFooter.vue";
     </SectionBlock>
 
     <SectionBlock id="experience" title="Experience">
-      <ExperienceList :roles="profile.experience" />
+      <ExperienceList :experience="profile.experience" />
     </SectionBlock>
 
     <SectionBlock id="education" title="Education & Languages">
