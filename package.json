@@ -11,6 +11,7 @@
     "typecheck": "vue-tsc --noEmit",
     "pdf": "npm run build && node scripts/generate-pdf.mjs",
     "pdf:verify": "pdftotext -layout public/cv.pdf -",
+    "pdf:verify:es": "pdftotext -layout public/cv-es.pdf -",
     "i18n:extract": "node scripts/i18n-extract.mjs",
     "i18n:update": "node scripts/i18n-update.mjs"
   },

@@ -1,12 +1,20 @@
 <script setup lang="ts">
 import { useTheme } from "@/composables/useTheme";
 import { useLocale } from "@/composables/useLocale";
+import { computed } from "vue";
 import { __, LOCALES } from "@/i18n";
 
 defineProps<{ current: "profile" | "projects" }>();
 
 const { theme, ready, toggle } = useTheme();
-const { next: nextLocale, toggle: toggleLocale } = useLocale();
+const { locale, next: nextLocale, toggle: toggleLocale } = useLocale();
+
+/** Built by scripts/generate-pdf.mjs, one per language. */
+const cv = computed(() =>
+  locale.value === "es"
+    ? { file: "cv-es.pdf", download: "javier-melero-cv-es.pdf" }
+    : { file: "cv.pdf", download: "javier-melero-cv.pdf" },
+);
 
 const base = import.meta.env.BASE_URL;
 </script>
@@ -63,8 +71,8 @@ const base = import.meta.env.BASE_URL;
         </button>
 
         <a
-          :href="`${base}cv.pdf`"
-          download="javier-melero-cv.pdf"
+          :href="`${base}${cv.file}`"
+          :download="cv.download"
           class="rounded-full bg-accent-deep px-3.5 py-1.5 text-sm font-medium text-bg transition hover:opacity-90"
         >
           {{ __("Download CV") }}

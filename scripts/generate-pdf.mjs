@@ -1,11 +1,14 @@
 /**
- * Render the built profile page to a print-ready CV PDF.
+ * Render the built profile page to print-ready CV PDFs, one per language.
  *
  *   npm run pdf
  *
- * Serves `dist/`, drives headless Chrome over the profile page, and writes the
- * result to both `dist/cv.pdf` (so it deploys with this build) and
- * `public/cv.pdf` (so it is committed and survives a plain `vite build`).
+ * Serves `dist/`, drives headless Chrome over the profile page once per
+ * language, and writes each result to both `dist/` (so it deploys with this
+ * build) and `public/` (so it is committed and survives a plain `vite build`).
+ * The language is picked with `?lang=`, which the page applies on load — the
+ * English run passes it too, so a choice stored by an earlier run cannot leak
+ * into it.
  *
  * Chrome's own print pipeline is used deliberately: it emits real, selectable
  * text, which is what an applicant tracking system parses. Client-side PDF
@@ -19,13 +22,18 @@
 import { createServer } from "node:http";
 import { readFile, copyFile, access } from "node:fs/promises";
 import { constants } from "node:fs";
-import { extname, join, normalize, resolve } from "node:path";
+import { extname, join, normalize } from "node:path";
 import { spawn } from "node:child_process";
 import { fileURLToPath } from "node:url";
 
 const ROOT = fileURLToPath(new URL("../dist/", import.meta.url));
-const DIST_PDF = resolve(ROOT, "cv.pdf");
-const PUBLIC_PDF = fileURLToPath(new URL("../public/cv.pdf", import.meta.url));
+const PUBLIC = fileURLToPath(new URL("../public/", import.meta.url));
+
+/** Must match the file names SiteNav links to. */
+const CVS = [
+  { lang: "en", file: "cv.pdf" },
+  { lang: "es", file: "cv-es.pdf" },
+];
 const PORT = Number(process.env.PDF_PORT ?? 4319);
 
 /** Must match `base` in vite.config.ts. */
@@ -107,7 +115,7 @@ function findChrome() {
   });
 }
 
-function print(chrome) {
+function print(chrome, lang, output) {
   return new Promise((ok, fail) => {
     const child = spawn(
       chrome,
@@ -122,8 +130,8 @@ function print(chrome) {
         // next to the site. This gives the fetch room without hanging the run.
         "--virtual-time-budget=15000",
         "--run-all-compositor-stages-before-draw",
-        `--print-to-pdf=${DIST_PDF}`,
-        `http://127.0.0.1:${PORT}${BASE}`,
+        `--print-to-pdf=${output}`,
+        `http://127.0.0.1:${PORT}${BASE}?lang=${lang}`,
       ],
       { stdio: ["ignore", "ignore", "inherit"] },
     );
@@ -146,10 +154,12 @@ if (!chrome) {
 
 const server = await serve();
 try {
-  await print(chrome);
-  await copyFile(DIST_PDF, PUBLIC_PDF);
-  console.log("\n✓ cv.pdf written to dist/ and public/");
-  console.log("  Verify what a parser sees:  npm run pdf:verify");
+  for (const { lang, file } of CVS) {
+    await print(chrome, lang, join(ROOT, file));
+    await copyFile(join(ROOT, file), join(PUBLIC, file));
+    console.log(`\n✓ ${file} written to dist/ and public/`);
+  }
+  console.log("  Verify what a parser sees:  npm run pdf:verify  ·  npm run pdf:verify:es");
 } finally {
   server.close();
 }
