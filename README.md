@@ -8,14 +8,19 @@ All content lives in [`src/data/profile.ts`](src/data/profile.ts). The site
 renders it as a profile page; the same data prints to a single-column,
 ATS-readable PDF. Components render the data — they never contain copy.
 
+The site is in English and Spanish, translated with GNU gettext catalogs — see
+[Translations](#translations).
+
 ## Commands
 
 ```bash
 npm run dev         # http://localhost:5173
 npm run build       # typecheck, then static build to dist/
-npm run pdf         # build, then render cv.pdf with headless Chrome
-npm run pdf:verify  # print what a parser extracts from the PDF
+npm run pdf         # build, then render cv.pdf and cv-es.pdf with headless Chrome
+npm run pdf:verify  # print what a parser extracts from the PDF (pdf:verify:es for Spanish)
 npm run typecheck   # vue-tsc --noEmit
+npm run i18n:extract  # write src/locales/messages.pot from the source
+npm run i18n:update   # merge the template into src/locales/*.po
 ```
 
 ## Structure
@@ -41,8 +46,10 @@ document.
 
 The output is written to `dist/cv.pdf` (deployed with the build) and
 `public/cv.pdf` (committed, so a plain `vite build` still ships a CV). The
-Download button links to that file rather than calling `window.print()`, so a
-visitor gets the exact PDF that was built and checked.
+Spanish CV is the same page rendered with `?lang=es`, written as `cv-es.pdf`.
+The Download button links to the file for the active language rather than
+calling `window.print()`, so a visitor gets the exact PDF that was built and
+checked.
 
 ### The print rules, and why each exists
 
@@ -69,6 +76,36 @@ npm run pdf && npm run pdf:verify
 ```
 
 If that output reads cleanly top to bottom, a parser will read it too.
+
+## Translations
+
+English is the source language: the English text is the msgid, so it needs no
+catalog. Other languages are GNU gettext `.po` files in
+[`src/locales/`](src/locales/), loaded at runtime by
+[gettext.js](https://github.com/guillaumepotier/gettext.js/).
+
+- Components translate with `__()`, `_n()` (plurals) and `_p()` (context),
+  from [`src/i18n`](src/i18n/index.ts).
+- Content in `src/data/` is marked with `N_()` and translated where it is
+  rendered. Prose is kept as one msgid per sentence (`Sentences`), so rewording
+  one sentence leaves the rest of its paragraph translated.
+- Product and technology names are left unmarked and render as is.
+
+After changing any text:
+
+```bash
+npm run i18n:extract   # xgettext: source → messages.pot
+npm run i18n:update    # msgmerge: messages.pot → es.po
+```
+
+Then translate the empty `msgstr` entries and review the ones flagged
+`#, fuzzy` — a reworded msgid inherits its old translation as fuzzy, and fuzzy
+entries are not shipped until the flag is removed. Any PO editor works (Poedit,
+Lokalize, Emacs po-mode). Untranslated strings fall back to English.
+
+The language switch happens client-side. The prerendered HTML is English and a
+stored Spanish choice is applied after hydration; `?lang=es` selects Spanish
+from a link.
 
 ## Deployment
 
