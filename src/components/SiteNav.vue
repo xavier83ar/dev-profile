@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useTheme } from "@/composables/useTheme";
 import { useLocale } from "@/composables/useLocale";
-import { LOCALES } from "@/i18n";
+import { __, LOCALES } from "@/i18n";
 
 defineProps<{ current: "profile" | "projects" }>();
 
@@ -25,7 +25,7 @@ const base = import.meta.env.BASE_URL;
               : 'text-muted hover:text-text'
           "
         >
-          Profile
+          {{ __("Profile") }}
         </a>
         <a
           :href="`${base}projects/`"
@@ -37,7 +37,7 @@ const base = import.meta.env.BASE_URL;
               : 'text-muted hover:text-text'
           "
         >
-          Projects
+          {{ __("Projects") }}
         </a>
       </div>
 
@@ -55,7 +55,7 @@ const base = import.meta.env.BASE_URL;
 
         <button
           type="button"
-          :aria-label="`Switch to ${theme === 'dark' ? 'light' : 'dark'} theme`"
+          :aria-label="theme === 'dark' ? __('Switch to light theme') : __('Switch to dark theme')"
           class="rounded-full border border-line px-2.5 py-1.5 text-sm text-muted transition hover:text-text"
           @click="toggle"
         >
@@ -67,7 +67,7 @@ const base = import.meta.env.BASE_URL;
           download="javier-melero-cv.pdf"
           class="rounded-full bg-accent-deep px-3.5 py-1.5 text-sm font-medium text-bg transition hover:opacity-90"
         >
-          Download CV
+          {{ __("Download CV") }}
         </a>
       </div>
     </div>

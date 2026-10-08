@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { Project } from "@/data/types";
+import { __ } from "@/i18n";
 
 defineProps<{ project: Project }>();
 </script>
@@ -7,9 +8,9 @@ defineProps<{ project: Project }>();
 <template>
   <article class="rounded-lg border border-line bg-surface p-5">
     <h3 class="font-semibold">{{ project.name }}</h3>
-    <p v-if="project.role" class="mt-0.5 text-sm text-subtle">{{ project.role }}</p>
+    <p v-if="project.role" class="mt-0.5 text-sm text-subtle">{{ __(project.role) }}</p>
 
-    <p class="mt-2 leading-relaxed text-muted">{{ project.description }}</p>
+    <p class="mt-2 leading-relaxed text-muted">{{ __(project.description) }}</p>
 
     <ul v-if="project.highlights?.length" class="mt-2.5 space-y-1 text-sm text-muted">
       <li
@@ -17,7 +18,7 @@ defineProps<{ project: Project }>();
         :key="highlight"
         class="relative pl-4 before:absolute before:left-0 before:content-['–']"
       >
-        {{ highlight }}
+        {{ __(highlight) }}
       </li>
     </ul>
 
@@ -31,7 +32,7 @@ defineProps<{ project: Project }>();
         rel="noreferrer"
         class="text-accent-deep underline decoration-transparent underline-offset-4 transition hover:decoration-current"
       >
-        Live
+        {{ __("Live") }}
       </a>
       <a
         v-if="project.repo"
@@ -40,7 +41,7 @@ defineProps<{ project: Project }>();
         rel="noreferrer"
         class="text-accent-deep underline decoration-transparent underline-offset-4 transition hover:decoration-current"
       >
-        Source
+        {{ __("Source") }}
       </a>
     </p>
   </article>

@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { Profile } from "@/data/types";
+import { __, __sentences } from "@/i18n";
 import Icon from "./Icon.vue";
 
 defineProps<{ profile: Profile }>();
@@ -24,23 +25,23 @@ const base = import.meta.env.BASE_URL;
           {{ profile.name }}
         </h1>
         <p class="mt-1 text-lg font-medium text-accent-deep sm:text-xl">
-          {{ profile.title }}
+          {{ __(profile.title) }}
         </p>
       </div>
     </div>
-    <p class="print-hide mt-3 max-w-2xl leading-relaxed text-muted">{{ profile.tagline }}</p>
+    <p class="print-hide mt-3 max-w-2xl leading-relaxed text-muted">{{ __sentences(profile.tagline) }}</p>
 
     <dl class="mt-5 space-y-1 text-sm">
       <div class="flex flex-wrap items-baseline gap-x-2">
-        <dt class="sr-only">Location</dt>
+        <dt class="sr-only">{{ __("Location") }}</dt>
         <dd class="text-muted">{{ profile.location }}</dd>
         <dd aria-hidden="true" class="text-subtle">·</dd>
-        <dt class="sr-only">Timezone</dt>
-        <dd class="font-medium text-text">{{ profile.timezone }}</dd>
+        <dt class="sr-only">{{ __("Timezone") }}</dt>
+        <dd class="font-medium text-text">{{ __(profile.timezone) }}</dd>
       </div>
       <div>
-        <dt class="sr-only">Availability</dt>
-        <dd class="text-muted">{{ profile.availability }}</dd>
+        <dt class="sr-only">{{ __("Availability") }}</dt>
+        <dd class="text-muted">{{ __(profile.availability) }}</dd>
       </div>
     </dl>
 

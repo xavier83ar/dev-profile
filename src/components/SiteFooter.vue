@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { __ } from "@/i18n";
 import Icon from "./Icon.vue";
 
 const REPO_URL = "https://github.com/xavier83ar/dev-profile";
@@ -6,21 +7,21 @@ const REPO_URL = "https://github.com/xavier83ar/dev-profile";
 
 <template>
   <footer class="hidden print:block mt-20 border-t pt-3 text-sm">
-    Check
+    {{ __("Check") }}
     <a
         href="https://javiermelero.com.ar/"
         class="underline decoration-line underline-offset-4 transition hover:text-accent-deep hover:decoration-accent"
     >
       https://javiermelero.com.ar/
     </a>
-    for an online version of this document.
+    {{ __("for an online version of this document.") }}
   </footer>
   <footer class="no-print border-t border-line">
     <div
       class="mx-auto flex max-w-3xl flex-wrap items-center justify-center gap-x-10 gap-y-3 px-4 py-10 text-sm text-subtle sm:px-8"
     >
       <span class="inline-flex items-center gap-2">
-        Built with
+        {{ __("Built with") }}
         <a
           href="https://claude.com"
           target="_blank"
@@ -33,7 +34,7 @@ const REPO_URL = "https://github.com/xavier83ar/dev-profile";
       </span>
 
       <span class="inline-flex items-center gap-2">
-        Made with
+        {{ __("Made with") }}
         <a
           href="https://vuejs.org"
           target="_blank"
@@ -55,12 +56,12 @@ const REPO_URL = "https://github.com/xavier83ar/dev-profile";
       </span>
 
       <span class="inline-flex items-center gap-2">
-        Source code
+        {{ __("Source code") }}
         <a
           :href="REPO_URL"
           target="_blank"
           rel="noreferrer"
-          aria-label="Source code on GitHub"
+          :aria-label="__('Source code on GitHub')"
           class="transition hover:text-accent-deep"
         >
           <Icon name="github" />

@@ -1,7 +1,13 @@
-const MONTHS = [
-  "Jan", "Feb", "Mar", "Apr", "May", "Jun",
-  "Jul", "Aug", "Sep", "Oct", "Nov", "Dec",
-];
+import { __, _n, _p } from "@/i18n";
+
+/** Abbreviated month names, translated on each call so they follow the active language. */
+function monthNames(): string[] {
+  return [
+    _p("month", "Jan"), _p("month", "Feb"), _p("month", "Mar"), _p("month", "Apr"),
+    _p("month", "May"), _p("month", "Jun"), _p("month", "Jul"), _p("month", "Aug"),
+    _p("month", "Sep"), _p("month", "Oct"), _p("month", "Nov"), _p("month", "Dec"),
+  ];
+}
 
 /** "2021-06" → "Jun 2021". Unparseable input passes through untouched. */
 export function formatMonth(value: string): string {
@@ -9,11 +15,11 @@ export function formatMonth(value: string): string {
   if (!match) return value;
   const index = Number(match[2]) - 1;
   if (index < 0 || index > 11) return value;
-  return `${MONTHS[index]} ${match[1]}`;
+  return `${monthNames()[index]} ${match[1]}`;
 }
 
 export function formatRange(start: string, end: string | null): string {
-  return `${formatMonth(start)} – ${end ? formatMonth(end) : "Present"}`;
+  return `${formatMonth(start)} – ${end ? formatMonth(end) : __("Present")}`;
 }
 
 /** "5 yrs 4 mos", or null when the dates aren't real dates. */
@@ -29,8 +35,8 @@ export function formatDuration(start: string, end: string | null): string | null
   const years = Math.floor(months / 12);
   const rest = months % 12;
   const parts: string[] = [];
-  if (years) parts.push(`${years} yr${years > 1 ? "s" : ""}`);
-  if (rest) parts.push(`${rest} mo${rest > 1 ? "s" : ""}`);
+  if (years) parts.push(_n("%1 yr", "%1 yrs", years, years));
+  if (rest) parts.push(_n("%1 mo", "%1 mos", rest, rest));
   return parts.join(" ");
 }
 

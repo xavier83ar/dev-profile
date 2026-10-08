@@ -3,7 +3,13 @@
  *
  * `profile.ts` and `projects.ts` are the only places content lives. Components
  * render these structures; they never contain sentences of their own.
+ *
+ * Text is written in English and marked with `N_()` for translation; anything
+ * left unmarked (product names, technologies) renders as is in every language.
+ * Prose longer than a sentence is `Sentences`: one msgid per sentence.
  */
+
+import type { Sentences } from "@/i18n";
 
 /** Glyphs available in Icon.vue. */
 export type IconName =
@@ -54,7 +60,7 @@ export type Experience = {
   /** e.g. "Remote — US company" */
   location: string;
   /** One or two sentences of context: what the company does, what you owned. */
-  summary: string;
+  summary: Sentences;
   highlights?: string[];
   stack?: string[];
   /** Most recent first. A company with one title has a single entry here. */
@@ -95,7 +101,7 @@ export type Profile = {
   /** The headline title — the strongest positioning signal on the page. */
   title: string;
   /** The pitch, in roughly fifteen words. */
-  tagline: string;
+  tagline: Sentences;
   location: string;
   /**
    * Filename of a square portrait in `public/`, resolved against the site base.
@@ -111,16 +117,16 @@ export type Profile = {
   phone?: string;
   links: Link[];
   /** Three or four sentences, for a hiring manager skimming in eight seconds. */
-  summary: string[];
+  summary: Sentences[];
   skills: {
-    description: string;
+    description: Sentences;
     groups: SkillGroup[];
   };
   /**
    * How AI fits into daily work and shipped features — one or two short
    * paragraphs, rendered directly under Skills.
    */
-  ai: string[];
+  ai: Sentences[];
   /** Most recent first. */
   experience: Experience[];
   education: Education[];
