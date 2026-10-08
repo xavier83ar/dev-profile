@@ -9,27 +9,27 @@ msgstr ""
 
 #: src/components/ExperienceList.vue:29
 msgid "%1 logo"
-msgstr ""
+msgstr "Logo de %1"
 
 #: src/lib/dates.ts:39
 msgid "%1 mo"
 msgid_plural "%1 mos"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 mes"
+msgstr[1] "%1 meses"
 
 #: src/lib/dates.ts:38
 msgid "%1 yr"
 msgid_plural "%1 yrs"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 año"
+msgstr[1] "%1 años"
 
 #: src/data/profile.ts:270
 msgid "2003 – on hold"
-msgstr ""
+msgstr "2003 – en pausa"
 
 #: src/data/profile.ts:271
 msgid "30 subjects completed."
-msgstr ""
+msgstr "30 materias aprobadas."
 
 #: src/data/profile.ts:224
 msgid ""
@@ -37,32 +37,40 @@ msgid ""
 "hosting to local companies, with clients across gaming, construction and "
 "local government."
 msgstr ""
+"Una startup fundada con amigos de la universidad que ofrecía desarrollo web "
+"y hosting a empresas locales, con clientes en los rubros de juegos, "
+"construcción y gobierno local."
 
 #: src/data/profile.ts:130
 msgid "Agile delivery & refinement"
-msgstr ""
+msgstr "Entrega ágil y refinamiento"
 
 #: src/ProfilePage.vue:27
 msgid "AI"
-msgstr ""
+msgstr "IA"
 
 #: src/data/profile.ts:139
 msgid "AI is part of how I build software day to day, not a novelty I bolt on."
 msgstr ""
+"La IA es parte de cómo construyo software día a día, no una novedad que "
+"agrego por encima."
 
 #: src/data/profile.ts:131
 msgid "AI-assisted engineering workflows"
-msgstr ""
+msgstr "Flujos de trabajo de ingeniería asistidos por IA"
 
 #: src/data/profile.ts:8
 msgid "Almost 20 years building for the web."
-msgstr ""
+msgstr "Casi 20 años construyendo para la web."
 
 #: index.html:7
 msgid ""
 "Almost 20 years building for the web. I own features end to end: design, "
 "data model, architecture, API, UI, and the underlying infrastructure."
 msgstr ""
+"Casi 20 años construyendo para la web. Me hago cargo de funcionalidades de "
+"punta a punta: diseño, modelo de datos, arquitectura, API, UI y la "
+"infraestructura subyacente."
 
 #: src/data/profile.ts:39
 msgid ""
@@ -72,10 +80,15 @@ msgid ""
 "touched almost every well known database engine, and I've done "
 "infrastructure before DevOps was a thing."
 msgstr ""
+"Aunque me enfoqué en el front end y las tecnologías web, diría que mi "
+"principal fortaleza es la versatilidad: trabajé con una lista extensa y "
+"diversa de tecnologías que va desde el stack web hasta aplicaciones de "
+"escritorio y móviles, pasé por casi todos los motores de base de datos "
+"conocidos, e hice infraestructura antes de que DevOps existiera."
 
 #: src/data/profile.ts:261
 msgid "Analista Universitario en Sistemas (Systems Analyst)"
-msgstr ""
+msgstr "Analista Universitario en Sistemas"
 
 #: src/data/profile.ts:144
 msgid ""
@@ -83,6 +96,10 @@ msgid ""
 "Dialogflow and later migrated to Google's Agent Development Kit (ADK), with "
 "a Python service connecting them to the rest of the platform."
 msgstr ""
+"En Pager Health trabajé en agentes conversacionales para los miembros, "
+"primero sobre Dialogflow y luego migrados al Agent Development Kit (ADK) de "
+"Google, con un servicio en Python que los conectaba con el resto de la "
+"plataforma."
 
 #: src/data/profile.ts:159
 msgid ""
@@ -90,30 +107,37 @@ msgid ""
 "across backend and frontend services, adding Spanish and Portuguese for "
 "Latin-American and Brazilian markets."
 msgstr ""
+"Redacté el estándar de internacionalización de la empresa y luego lo "
+"implementé en los servicios de backend y frontend, agregando español y "
+"portugués para los mercados latinoamericano y brasileño."
 
 #: src/components/ProfileHeader.vue:43
 msgid "Availability"
-msgstr ""
+msgstr "Disponibilidad"
 
 #: src/data/profile.ts:182
 msgid ""
 "Built and maintained an embeddable patient SDK, consumed by enterprise "
 "health-plan clients."
 msgstr ""
+"Desarrollé y mantuve un SDK embebible para pacientes, utilizado por "
+"clientes corporativos de planes de salud."
 
 #: src/data/profile.ts:227
 msgid ""
 "Built the technical practice from zero (development, hosting and "
 "infrastructure) for clients across several industries."
 msgstr ""
+"Construí el área técnica desde cero (desarrollo, hosting e infraestructura) "
+"para clientes de distintas industrias."
 
 #: src/components/SiteFooter.vue:24
 msgid "Built with"
-msgstr ""
+msgstr "Construido con"
 
 #: src/components/SiteFooter.vue:10
 msgid "Check"
-msgstr ""
+msgstr "Ver"
 
 #: src/data/profile.ts:140
 msgid ""
@@ -122,22 +146,29 @@ msgid ""
 "cross-repo changes, and I'm comfortable writing agent skills and "
 "prompt-driven workflows rather than just prompting ad hoc."
 msgstr ""
+"Claude Code es mi herramienta principal para análisis, diseño técnico e "
+"implementación: lo uso para redactar RFCs, revisar código y trabajar en "
+"cambios que abarcan varios repositorios, y me siento cómodo escribiendo "
+"skills para agentes y flujos de trabajo basados en prompts, en lugar de "
+"limitarme a escribir prompts sobre la marcha."
 
 #: src/data/profile.ts:126
 msgid "Code review at scale"
-msgstr ""
+msgstr "Code review a escala"
 
 #: src/data/profile.ts:128
 msgid "Cross-team coordination"
-msgstr ""
+msgstr "Coordinación entre equipos"
 
 #: src/data/profile.ts:82
 msgid "Database"
-msgstr ""
+msgstr "Bases de datos"
 
 #: src/data/profile.ts:242
 msgid "DB Administration of large databases with +100 millions records tables."
 msgstr ""
+"Administración de bases de datos de gran tamaño, con tablas de más de 100 "
+"millones de registros."
 
 #: src/data/profile.ts:175
 msgid ""
@@ -145,10 +176,13 @@ msgid ""
 "across seven services: Twilio templated messages, configuration UI, routing "
 "and agent send flow."
 msgstr ""
+"Implementé de punta a punta WhatsApp Business como canal de comunicación "
+"con los miembros, en siete servicios: mensajes con plantillas de Twilio, UI "
+"de configuración, enrutamiento y flujo de envío para agentes."
 
 #: src/data/profile.ts:59
 msgid "Design systems & component libraries"
-msgstr ""
+msgstr "Design systems y librerías de componentes"
 
 #: src/data/profile.ts:214
 msgid ""
@@ -156,56 +190,62 @@ msgid ""
 "mobile apps (android and ios), internal admin tools, backend, api's, "
 "databases and the infrastructure that serves them."
 msgstr ""
+"Desarrollé soluciones completas que incluían: sitio web público, "
+"aplicaciones web (PWA), aplicaciones móviles (Android e iOS), herramientas "
+"internas de administración, backend, APIs, bases de datos y la "
+"infraestructura que las sirve."
 
 #: src/components/SiteNav.vue:70
 msgid "Download CV"
-msgstr ""
+msgstr "Descargar CV"
 
 #: src/components/EducationLanguages.vue:11
 msgid "Education"
-msgstr ""
+msgstr "Formación"
 
 #: src/ProfilePage.vue:35
 msgid "Education & Languages"
-msgstr ""
+msgstr "Formación e idiomas"
 
 #: src/data/profile.ts:60
 msgid "Embeddable SDKs & widgets"
-msgstr ""
+msgstr "SDKs y widgets embebibles"
 
 #: src/ProjectsPage.vue:21
 msgid "Employer and client work is described on the"
-msgstr ""
+msgstr "El trabajo para empleadores y clientes está descrito en la"
 
 #: src/data/profile.ts:278
 msgid "English"
-msgstr ""
+msgstr "Inglés"
 
 #: src/data/profile.ts:233
 msgid "Eniti Media SL (former Cenys Network SL)(extinct)"
-msgstr ""
+msgstr "Eniti Media SL (ex Cenys Network SL)(extinta)"
 
 #: src/data/profile.ts:71
 msgid "Event-driven architecture (GCP Pub/Sub)"
-msgstr ""
+msgstr "Arquitectura orientada a eventos (GCP Pub/Sub)"
 
 #: src/ProfilePage.vue:31
 msgid "Experience"
-msgstr ""
+msgstr "Experiencia"
 
 #: src/data/profile.ts:280
 msgid ""
 "Five years working in English with a US-based team, written technical "
 "design, RFC and architecture review, and daily collaboration."
 msgstr ""
+"Cinco años trabajando en inglés con un equipo de Estados Unidos: diseño "
+"técnico escrito, revisión de RFCs y de arquitectura, y colaboración diaria."
 
 #: src/data/profile.ts:118
 msgid "Flaky-test remediation"
-msgstr ""
+msgstr "Corrección de tests inestables (flaky)"
 
 #: src/components/SiteFooter.vue:17
 msgid "for an online version of this document."
-msgstr ""
+msgstr "para la versión online de este documento."
 
 #: src/data/profile.ts:205
 msgid ""
@@ -213,34 +253,42 @@ msgid ""
 "with Soluciones yPunto, giving the combined company the capacity to take on "
 "larger clients."
 msgstr ""
+"Surgió cuando el área de desarrollo de software de Linked Comunicaciones se "
+"fusionó con Soluciones yPunto, lo que le dio a la empresa resultante la "
+"capacidad de trabajar con clientes más grandes."
 
 #: src/data/profile.ts:222
 msgid "Founding Partner & CTO"
-msgstr ""
+msgstr "Socio fundador y CTO"
 
 #: src/data/profile.ts:30
 msgid ""
 "I feel comfortable owning features during the whole lifecycle: from the "
 "early design to the implementation, monitoring and maintenance."
 msgstr ""
+"Me siento cómodo haciéndome cargo de funcionalidades durante todo su ciclo "
+"de vida: desde el diseño inicial hasta la implementación, el monitoreo y el "
+"mantenimiento."
 
 #: src/data/profile.ts:9
 msgid ""
 "I own features end to end: design, data model, architecture, API, UI, and "
 "the underlying infrastructure."
 msgstr ""
+"Me hago cargo de funcionalidades de punta a punta: diseño, modelo de datos, "
+"arquitectura, API, UI y la infraestructura subyacente."
 
 #: src/data/profile.ts:209
 msgid "I set technical direction and led delivery."
-msgstr ""
+msgstr "Definí la dirección técnica y lideré la entrega."
 
 #: src/data/profile.ts:26
 msgid "I'm a developer with almost 20 years of experience."
-msgstr ""
+msgstr "Soy desarrollador, con casi 20 años de experiencia."
 
 #: src/data/profile.ts:143
 msgid "I've also built AI into the product, not just around it."
-msgstr ""
+msgstr "También integré IA en el producto, no solo a su alrededor."
 
 #: src/data/profile.ts:27
 msgid ""
@@ -248,43 +296,47 @@ msgid ""
 "most of my experience was building on web technologies, that's why Lead Web "
 "Engineer title is what best describes me."
 msgstr ""
+"A lo largo de mi carrera tuve la oportunidad de trabajar con tecnologías "
+"muy diversas, pero la mayor parte de mi experiencia fue construyendo sobre "
+"tecnologías web; por eso Lead Web Engineer es el título que mejor me "
+"describe."
 
 #: src/data/profile.ts:129
 msgid "Incident root-cause analysis"
-msgstr ""
+msgstr "Análisis de causa raíz de incidentes"
 
 #: src/data/profile.ts:95
 msgid "Infrastructure & CI/CD"
-msgstr ""
+msgstr "Infraestructura y CI/CD"
 
 #: src/data/profile.ts:268
 msgid "Ingeniería en Sistemas de Información — coursework through fifth year"
-msgstr ""
+msgstr "Ingeniería en Sistemas de Información — cursada hasta quinto año"
 
 #: src/data/profile.ts:264
 msgid "Intermediate degree of the Information Systems Engineering career."
-msgstr ""
+msgstr "Título intermedio de la carrera de Ingeniería en Sistemas de Información."
 
 #: index.html:6
 msgid "Javier Melero — Lead Web Engineer"
-msgstr ""
+msgstr "Javier Melero — Lead Web Engineer"
 
 #: src/data/profile.ts:73
 msgid "JSON Schema contracts"
-msgstr ""
+msgstr "Contratos con JSON Schema"
 
 #: src/components/EducationLanguages.vue:23
 msgid "Languages"
-msgstr ""
+msgstr "Idiomas"
 
 #: src/data/profile.ts:162
 #: src/data/profile.ts:6
 msgid "Lead Web Engineer"
-msgstr ""
+msgstr "Lead Web Engineer"
 
 #: src/data/profile.ts:122
 msgid "Leadership & Practice"
-msgstr ""
+msgstr "Liderazgo y práctica"
 
 #: src/data/profile.ts:166
 msgid ""
@@ -293,34 +345,38 @@ msgid ""
 "the member-facing UI, and provisioned the Cloud Run service, Terraform "
 "modules and delivery pipelines to production."
 msgstr ""
+"Lideré la ingeniería web de una aplicación de búsqueda de prestadores y "
+"reserva de turnos: redacté el RFC del modelo de datos de prestadores, lo "
+"implementé, construí la UI para los miembros y aprovisioné el servicio en "
+"Cloud Run, los módulos de Terraform y los pipelines de entrega a producción."
 
 #: src/components/ProjectCard.vue:35
 msgid "Live"
-msgstr ""
+msgstr "Ver sitio"
 
 #: src/components/ProfileHeader.vue:36
 msgid "Location"
-msgstr ""
+msgstr "Ubicación"
 
 #: src/components/SiteFooter.vue:37
 msgid "Made with"
-msgstr ""
+msgstr "Hecho con"
 
 #: src/data/profile.ts:234
 msgid "Málaga, Spain / Santo Tomé, Argentina"
-msgstr ""
+msgstr "Málaga, España / Santo Tomé, Argentina"
 
 #: src/ProjectsPage.vue:39
 msgid "Meanwhile you can check my github profile."
-msgstr ""
+msgstr "Mientras tanto, mi perfil de GitHub está disponible."
 
 #: src/data/profile.ts:127
 msgid "Mentoring"
-msgstr ""
+msgstr "Mentoría"
 
 #: src/data/profile.ts:61
 msgid "Micro-frontend & plugin architectures"
-msgstr ""
+msgstr "Arquitecturas de micro-frontends y plugins"
 
 #: src/data/profile.ts:171
 msgid ""
@@ -328,180 +384,205 @@ msgid ""
 "across five services, covering SDK core, embedded widget, agent console, "
 "Helm CSP policy and external consumer documentation."
 msgstr ""
+"Migré las videollamadas de miembros y agentes de Twilio al Zoom Video SDK "
+"en cinco servicios, abarcando el core del SDK, el widget embebido, la "
+"consola de agentes, la política CSP en Helm y la documentación para "
+"consumidores externos."
 
 #: src/data/profile.ts:91
 msgid "Migrations"
-msgstr ""
+msgstr "Migraciones"
 
 #: src/data/profile.ts:145
 msgid ""
 "More recently I helped ship an AI-powered search experience for our "
 "provider-search product, using Gemini 3.1 Flash Lite as the model behind it."
 msgstr ""
+"Más recientemente ayudé a lanzar una experiencia de búsqueda potenciada por "
+"IA para nuestro producto de búsqueda de prestadores, con Gemini 3.1 Flash "
+"Lite como modelo."
 
 #: src/data/profile.ts:213
 msgid ""
 "Moved from public/institutional website projects to complex systems that "
 "powered customers business for external and internal users."
 msgstr ""
+"Pasamos de proyectos de sitios web públicos e institucionales a sistemas "
+"complejos que sostenían el negocio de los clientes, para usuarios externos "
+"e internos."
 
 #: src/data/profile.ts:74
 msgid "Multi-tenancy & data-level tenancy scoping"
-msgstr ""
+msgstr "Multi-tenancy y aislamiento de tenants a nivel de datos"
 
 #: src/data/profile.ts:276
 msgid "Native"
-msgstr ""
+msgstr "Nativo"
 
 #: src/data/profile.ts:253
 msgid ""
 "Network administration and configuration at the university's connectivity "
 "labs, alongside a research position in a math-applied program."
 msgstr ""
+"Administración y configuración de redes en los laboratorios de conectividad "
+"de la universidad, junto con un cargo de investigación en un programa de "
+"matemática aplicada."
 
 #: src/data/profile.ts:15
 msgid "Open to remote roles · Available as an independent contractor"
-msgstr ""
+msgstr "Abierto a puestos remotos · Disponible como contratista independiente"
 
 #: src/data/profile.ts:203
 msgid "Partner & CTO"
-msgstr ""
+msgstr "Socio y CTO"
 
 #: src/lib/dates.ts:22
 msgid "Present"
-msgstr ""
+msgstr "Actualidad"
 
 #: src/data/profile.ts:279
 msgid "Professional working proficiency"
-msgstr ""
+msgstr "Competencia profesional"
 
 #: src/components/SiteNav.vue:28
 #: src/ProfilePage.vue:19
 msgid "Profile"
-msgstr ""
+msgstr "Perfil"
 
 #: src/ProjectsPage.vue:25
 msgid "profile page"
-msgstr ""
+msgstr "página de perfil"
 
 #: src/data/profile.ts:235
 msgid "Project Manager"
-msgstr ""
+msgstr "Project Manager"
 
 #: src/components/SiteNav.vue:40
 #: src/ProjectsPage.vue:18
 msgid "Projects"
-msgstr ""
+msgstr "Proyectos"
 
 #: projects/index.html:6
 msgid "Projects — Javier Melero"
-msgstr ""
+msgstr "Proyectos — Javier Melero"
 
 #: src/data/profile.ts:228
 msgid ""
 "Published reusable components from client work as open source: CakePHP "
 "plugins, JavaScript libraries and upstream bug fixes."
 msgstr ""
+"Publiqué como open source componentes reutilizables surgidos del trabajo "
+"con clientes: plugins de CakePHP, librerías JavaScript y correcciones de "
+"bugs upstream."
 
 #: src/data/profile.ts:237
 msgid ""
 "Ran the web development department for a Spanish media company, working "
 "across two countries."
 msgstr ""
+"Dirigí el departamento de desarrollo web de una empresa de medios española, "
+"trabajando entre dos países."
 
 #: src/data/profile.ts:152
 msgid "Remote — US company"
-msgstr ""
+msgstr "Remoto — empresa de EE. UU."
 
 #: src/data/profile.ts:70
 msgid "REST API design"
-msgstr ""
+msgstr "Diseño de APIs REST"
 
 #: src/data/profile.ts:125
 msgid "RFCs & written technical design"
-msgstr ""
+msgstr "RFCs y diseño técnico escrito"
 
 #: src/data/profile.ts:56
 msgid "SCSS / CSS architecture"
-msgstr ""
+msgstr "SCSS / arquitectura CSS"
 
 #: projects/index.html:7
 msgid "Selected projects and open-source work by Javier Melero, lead web engineer."
 msgstr ""
+"Proyectos seleccionados y trabajo open source de Javier Melero, lead web "
+"engineer."
 
 #: src/ProjectsPage.vue:20
 msgid "Selected work and open-source components."
-msgstr ""
+msgstr "Trabajos seleccionados y componentes open source."
 
 #: src/data/profile.ts:105
 msgid "semantic-release & npm package publishing"
-msgstr ""
+msgstr "semantic-release y publicación de paquetes npm"
 
 #: src/data/profile.ts:179
 msgid "Senior Front-end Engineer"
-msgstr ""
+msgstr "Senior Front-end Engineer"
 
 #: src/data/profile.ts:241
 msgid "Services optimization for response time under heavy load."
 msgstr ""
+"Optimización de servicios para mejorar el tiempo de respuesta bajo alta "
+"carga."
 
 #: src/data/profile.ts:212
 msgid ""
 "Set technical direction and led delivery for client web projects, taking on "
 "engagements larger than either predecessor company had handled alone."
 msgstr ""
+"Definí la dirección técnica y lideré la entrega de proyectos web para "
+"clientes, encarando proyectos más grandes que los que cualquiera de las dos "
+"empresas predecesoras había manejado por separado."
 
 #: src/ProfilePage.vue:23
 msgid "Skills"
-msgstr ""
+msgstr "Habilidades"
 
 #: src/components/ExperienceList.vue:72
 msgid "Skills:"
-msgstr ""
+msgstr "Habilidades:"
 
 #: src/components/ProjectCard.vue:44
 msgid "Source"
-msgstr ""
+msgstr "Código"
 
 #: src/components/SiteFooter.vue:59
 msgid "Source code"
-msgstr ""
+msgstr "Código fuente"
 
 #: src/components/SiteFooter.vue:64
 msgid "Source code on GitHub"
-msgstr ""
+msgstr "Código fuente en GitHub"
 
 #: src/data/profile.ts:276
 msgid "Spanish"
-msgstr ""
+msgstr "Español"
 
 #: src/data/profile.ts:156
 msgid "Staff Engineer"
-msgstr ""
+msgstr "Staff Engineer"
 
 #: src/data/profile.ts:117
 msgid "Structured logging"
-msgstr ""
+msgstr "Logging estructurado"
 
 #: src/components/SiteNav.vue:58
 msgid "Switch to dark theme"
-msgstr ""
+msgstr "Cambiar al tema oscuro"
 
 #: src/components/SiteNav.vue:58
 msgid "Switch to light theme"
-msgstr ""
+msgstr "Cambiar al tema claro"
 
 #: src/data/profile.ts:250
 msgid "Systems Administrator & Research Assistant"
-msgstr ""
+msgstr "Administrador de sistemas y auxiliar de investigación"
 
 #: src/data/profile.ts:124
 msgid "Technical leadership"
-msgstr ""
+msgstr "Liderazgo técnico"
 
 #: src/data/profile.ts:110
 msgid "Testing & Observability"
-msgstr ""
+msgstr "Testing y observabilidad"
 
 #: src/data/profile.ts:33
 msgid ""
@@ -509,91 +590,100 @@ msgid ""
 "I carried features across every layer they touched: data model, API, "
 "interface and the infrastructure underneath."
 msgstr ""
+"Los últimos cinco años trabajé para una empresa de salud digital de Estados "
+"Unidos, donde llevé funcionalidades a través de todas las capas que "
+"involucraban: modelo de datos, API, interfaz y la infraestructura "
+"subyacente."
 
 #: src/components/ProfileHeader.vue:39
 msgid "Timezone"
-msgstr ""
+msgstr "Zona horaria"
 
 #: src/data/profile.ts:104
 msgid "Trunk-based development"
-msgstr ""
+msgstr "Trunk-based development"
 
 #: src/data/profile.ts:186
 msgid ""
 "US digital-health company building virtual-care products for enterprise "
 "health plans and insurers."
 msgstr ""
+"Empresa de salud digital de Estados Unidos que desarrolla productos de "
+"atención virtual para planes de salud corporativos y aseguradoras."
 
 #: src/data/profile.ts:14
 msgid "UTC-3 · full overlap with US business hours"
-msgstr ""
+msgstr "UTC-3 · superposición total con el horario laboral de EE. UU."
 
 #: src/ProjectsPage.vue:37
 msgid "Work in progress."
-msgstr ""
+msgstr "En construcción."
 
 #: src/data/profile.ts:240
 msgid ""
 "Worked with internet ads, marketing campaigns and partner programs, massive "
 "e-mail campaigns (millions of e-mails sent per day)."
 msgstr ""
+"Trabajé con publicidad en internet, campañas de marketing y programas de "
+"afiliados, y campañas masivas de e-mail (millones de e-mails enviados por "
+"día)."
 
 #: src/lib/dates.ts:6
 msgctxt "month"
 msgid "Apr"
-msgstr ""
+msgstr "abr"
 
 #: src/lib/dates.ts:7
 msgctxt "month"
 msgid "Aug"
-msgstr ""
+msgstr "ago"
 
 #: src/lib/dates.ts:8
 msgctxt "month"
 msgid "Dec"
-msgstr ""
+msgstr "dic"
 
 #: src/lib/dates.ts:6
 msgctxt "month"
 msgid "Feb"
-msgstr ""
+msgstr "feb"
 
 #: src/lib/dates.ts:6
 msgctxt "month"
 msgid "Jan"
-msgstr ""
+msgstr "ene"
 
 #: src/lib/dates.ts:7
 msgctxt "month"
 msgid "Jul"
-msgstr ""
+msgstr "jul"
 
 #: src/lib/dates.ts:7
 msgctxt "month"
 msgid "Jun"
-msgstr ""
+msgstr "jun"
 
 #: src/lib/dates.ts:6
 msgctxt "month"
 msgid "Mar"
-msgstr ""
+msgstr "mar"
 
 #: src/lib/dates.ts:7
 msgctxt "month"
 msgid "May"
-msgstr ""
+msgstr "may"
 
 #: src/lib/dates.ts:8
 msgctxt "month"
 msgid "Nov"
-msgstr ""
+msgstr "nov"
 
 #: src/lib/dates.ts:8
 msgctxt "month"
 msgid "Oct"
-msgstr ""
+msgstr "oct"
 
 #: src/lib/dates.ts:8
 msgctxt "month"
 msgid "Sep"
-msgstr ""
+msgstr "sep"
