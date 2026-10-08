@@ -1,9 +1,12 @@
 <script setup lang="ts">
 import { useTheme } from "@/composables/useTheme";
+import { useLocale } from "@/composables/useLocale";
+import { LOCALES } from "@/i18n";
 
 defineProps<{ current: "profile" | "projects" }>();
 
 const { theme, ready, toggle } = useTheme();
+const { next: nextLocale, toggle: toggleLocale } = useLocale();
 
 const base = import.meta.env.BASE_URL;
 </script>
@@ -39,6 +42,17 @@ const base = import.meta.env.BASE_URL;
       </div>
 
       <div class="flex items-center gap-2">
+        <button
+          type="button"
+          :lang="nextLocale"
+          :aria-label="LOCALES[nextLocale]"
+          :title="LOCALES[nextLocale]"
+          class="rounded-full border border-line px-2.5 py-1.5 text-sm font-medium uppercase text-muted transition hover:text-text"
+          @click="toggleLocale"
+        >
+          {{ nextLocale }}
+        </button>
+
         <button
           type="button"
           :aria-label="`Switch to ${theme === 'dark' ? 'light' : 'dark'} theme`"
