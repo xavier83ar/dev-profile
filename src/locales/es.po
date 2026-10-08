@@ -1,0 +1,26 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: dev-profile\n"
+"Language-Team: Spanish\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: index.html:7
+msgid ""
+"Almost 20 years building for the web. I own features end to end: design, "
+"data model, architecture, API, UI, and the underlying infrastructure."
+msgstr ""
+
+#: index.html:6
+msgid "Javier Melero — Lead Web Engineer"
+msgstr ""
+
+#: projects/index.html:6
+msgid "Projects — Javier Melero"
+msgstr ""
+
+#: projects/index.html:7
+msgid "Selected projects and open-source work by Javier Melero, lead web engineer."
+msgstr ""
