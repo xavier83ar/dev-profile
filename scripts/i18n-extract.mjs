@@ -81,5 +81,8 @@ extractor.savePotFile(`${root}${POT}`, {
   "Project-Id-Version": "dev-profile",
   "Content-Type": "text/plain; charset=UTF-8",
 });
-extractor.printStats();
-console.log(`\n✓ ${relative(process.cwd(), `${root}${POT}`)} written`);
+const { numberOfMessages, numberOfMessageUsages } = extractor.getStats();
+console.log(
+  `✓ ${relative(process.cwd(), `${root}${POT}`)}: ` +
+    `${numberOfMessages} messages, ${numberOfMessageUsages} usages`,
+);
