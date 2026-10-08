@@ -123,7 +123,7 @@ msgstr ""
 msgid "Developed complete solutions including: public website, web apps (pwa), mobile apps (android and ios), internal admin tools, backend, api's, databases and the infrastructure that serves them."
 msgstr ""
 
-#: src/components/SiteNav.vue:70
+#: src/components/SiteNav.vue:78
 msgid "Download CV"
 msgstr ""
 
@@ -316,7 +316,7 @@ msgstr ""
 msgid "Professional working proficiency"
 msgstr ""
 
-#: src/components/SiteNav.vue:28
+#: src/components/SiteNav.vue:36
 #: src/ProfilePage.vue:19
 msgid "Profile"
 msgstr ""
@@ -329,7 +329,7 @@ msgstr ""
 msgid "Project Manager"
 msgstr ""
 
-#: src/components/SiteNav.vue:40
+#: src/components/SiteNav.vue:48
 #: src/ProjectsPage.vue:18
 msgid "Projects"
 msgstr ""
@@ -418,11 +418,11 @@ msgstr ""
 msgid "Structured logging"
 msgstr ""
 
-#: src/components/SiteNav.vue:58
+#: src/components/SiteNav.vue:66
 msgid "Switch to dark theme"
 msgstr ""
 
-#: src/components/SiteNav.vue:58
+#: src/components/SiteNav.vue:66
 msgid "Switch to light theme"
 msgstr ""
 

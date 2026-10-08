@@ -195,7 +195,7 @@ msgstr ""
 "internas de administración, backend, APIs, bases de datos y la "
 "infraestructura que las sirve."
 
-#: src/components/SiteNav.vue:70
+#: src/components/SiteNav.vue:78
 msgid "Download CV"
 msgstr "Descargar CV"
 
@@ -444,7 +444,7 @@ msgstr "Actualidad"
 msgid "Professional working proficiency"
 msgstr "Competencia profesional"
 
-#: src/components/SiteNav.vue:28
+#: src/components/SiteNav.vue:36
 #: src/ProfilePage.vue:19
 msgid "Profile"
 msgstr "Perfil"
@@ -457,7 +457,7 @@ msgstr "página de perfil"
 msgid "Project Manager"
 msgstr "Project Manager"
 
-#: src/components/SiteNav.vue:40
+#: src/components/SiteNav.vue:48
 #: src/ProjectsPage.vue:18
 msgid "Projects"
 msgstr "Proyectos"
@@ -564,11 +564,11 @@ msgstr "Staff Engineer"
 msgid "Structured logging"
 msgstr "Logging estructurado"
 
-#: src/components/SiteNav.vue:58
+#: src/components/SiteNav.vue:66
 msgid "Switch to dark theme"
 msgstr "Cambiar al tema oscuro"
 
-#: src/components/SiteNav.vue:58
+#: src/components/SiteNav.vue:66
 msgid "Switch to light theme"
 msgstr "Cambiar al tema claro"
 
