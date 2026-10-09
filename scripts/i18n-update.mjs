@@ -12,7 +12,9 @@
  *     translation, flagged `fuzzy` with the old msgid as `#|` — the usual case
  *     when a sentence in `src/data/` is reworded. Fuzzy entries are not shipped
  *     until a translator reviews them and drops the flag;
- *   · anything left over is kept as an obsolete `#~` entry, never deleted.
+ *   · anything left over is kept as an obsolete `#~` entry, never deleted;
+ *   · a plural entry whose number of forms no longer matches `Plural-Forms`
+ *     is resized and flagged `fuzzy`, so the new form gets translated.
  *
  * Source references (`#:`) always come from the template; translator comments
  * and flags from the catalog.
@@ -22,8 +24,17 @@ import { po } from "gettext-parser";
 import { readFile, writeFile, access } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 
+/**
+ * Plural rules follow CLDR rather than the older GNU gettext tables, which give
+ * Spanish two forms. CLDR has three: one (1 año), many (exact multiples of a
+ * million, which take "de": 1000000 de años) and other (0 años, 254 años).
+ * https://www.unicode.org/cldr/charts/48/supplemental/language_plural_rules.html#es
+ */
 const LANGUAGES = {
-  es: { team: "Spanish", pluralForms: "nplurals=2; plural=(n != 1);" },
+  es: {
+    team: "Spanish",
+    pluralForms: "nplurals=3; plural=(n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2);",
+  },
 };
 
 /** Below this similarity a reworded msgid counts as new rather than fuzzy. */
@@ -103,7 +114,7 @@ for (const [lang, { team, pluralForms }] of Object.entries(LANGUAGES)) {
   const unused = new Map([...previous].filter(([, entry]) => isTranslated(entry)));
 
   const translations = { "": { "": { msgid: "", msgstr: [""] } } };
-  const stats = { kept: 0, fuzzy: 0, new: 0, obsolete: 0 };
+  const stats = { kept: 0, fuzzy: 0, resized: 0, new: 0, obsolete: 0 };
 
   for (const source of entriesOf(template.translations)) {
     const entry = {
@@ -146,6 +157,12 @@ for (const [lang, { team, pluralForms }] of Object.entries(LANGUAGES)) {
       }
     }
 
+    if (entry.msgid_plural && isTranslated(entry) && entry.msgstr.length !== nplurals) {
+      entry.msgstr = Array.from({ length: nplurals }, (_, i) => entry.msgstr[i] ?? "");
+      entry.comments.flag = withFlag(entry.comments.flag, "fuzzy");
+      stats.resized++;
+    }
+
     insert(translations, entry);
   }
 
@@ -165,7 +182,7 @@ for (const [lang, { team, pluralForms }] of Object.entries(LANGUAGES)) {
     (e) => isTranslated(e) && !e.comments?.flag?.includes("fuzzy"),
   ).length;
   console.log(
-    `${lang}.po: ${done}/${total} translated · ${stats.fuzzy} newly fuzzy · ` +
+    `${lang}.po: ${done}/${total} translated · ${stats.fuzzy + stats.resized} newly fuzzy · ` +
       `${stats.new} new · ${stats.obsolete} obsolete`,
   );
 }

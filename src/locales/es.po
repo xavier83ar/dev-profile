@@ -9,7 +9,8 @@ msgstr ""
 "Last-Translator: \n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=3; plural=(n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? "
+"1 : 2);\n"
 "X-Generator: Poedit 3.9\n"
 
 #: src/components/ExperienceList.vue:29
@@ -20,13 +21,15 @@ msgstr "Logo de %1"
 msgid "%1 mo"
 msgid_plural "%1 mos"
 msgstr[0] "%1 mes"
-msgstr[1] "%1 meses"
+msgstr[1] "%1 de meses"
+msgstr[2] "%1 meses"
 
 #: src/lib/dates.ts:38
 msgid "%1 yr"
 msgid_plural "%1 yrs"
 msgstr[0] "%1 año"
-msgstr[1] "%1 años"
+msgstr[1] "%1 de años"
+msgstr[2] "%1 años"
 
 #: src/data/profile.ts:264
 msgid "2003 – on hold"

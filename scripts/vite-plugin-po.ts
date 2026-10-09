@@ -9,7 +9,8 @@ const CONTEXT_DELIMITER = "\u0004";
  * Each `.po` file is compiled, at build time, into the JSON gettext.js loads —
  * the same shape its own `po2json-gettextjs` writes — so the catalog stays the
  * single source and no generated JSON is committed. As with `msgfmt`, fuzzy and
- * empty entries are left out: the English msgid renders in their place.
+ * empty entries are left out — including plurals missing any one form — and the
+ * English msgid renders in their place.
  */
 export default function poLoader(): Plugin {
   return {
@@ -29,7 +30,7 @@ export default function poLoader(): Plugin {
         for (const entry of Object.values(entries)) {
           if (!entry.msgid) continue;
           if (entry.comments?.flag?.includes("fuzzy")) continue;
-          if (!entry.msgstr.some(Boolean)) continue;
+          if (!entry.msgstr.every(Boolean)) continue;
 
           const key = context ? `${context}${CONTEXT_DELIMITER}${entry.msgid}` : entry.msgid;
           json[key] = entry.msgid_plural ? entry.msgstr : entry.msgstr[0];
