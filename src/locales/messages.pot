@@ -1,0 +1,527 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Project-Id-Version: dev-profile\n"
+
+#: src/components/ExperienceList.vue:29
+msgid "%1 logo"
+msgstr ""
+
+#: src/lib/dates.ts:39
+msgid "%1 mo"
+msgid_plural "%1 mos"
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/lib/dates.ts:38
+msgid "%1 yr"
+msgid_plural "%1 yrs"
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/data/profile.ts:264
+msgid "2003 – on hold"
+msgstr ""
+
+#: src/data/profile.ts:265
+msgid "30 subjects completed."
+msgstr ""
+
+#: src/data/profile.ts:223
+msgid "A startup founded with university friends providing web development and hosting to local companies, with clients across gaming, construction and local government."
+msgstr ""
+
+#: src/data/profile.ts:132
+msgid "Agile delivery & refinement"
+msgstr ""
+
+#: src/ProfilePage.vue:33
+msgid "AI"
+msgstr ""
+
+#: src/data/profile.ts:141
+msgid "AI is part of how I build software day to day, not a novelty I bolt on."
+msgstr ""
+
+#: src/data/profile.ts:133
+msgid "AI-assisted engineering workflows"
+msgstr ""
+
+#: src/data/profile.ts:16
+msgid "Almost 20 years building for the web."
+msgstr ""
+
+#: src/ProfilePage.vue:15
+msgid "Almost 20 years building for the web. I own features end to end: design, data model, architecture, API, UI, and the underlying infrastructure."
+msgstr ""
+
+#: src/data/profile.ts:42
+msgid "Although I've been focused on front end and web technologies, I would argue that my main strength is versatility, as I worked with an extensive and diverse list technologies that goes from web stack to desktop and mobile, I touched almost every well known database engine, and I've done infrastructure before DevOps was a thing."
+msgstr ""
+
+#: src/data/profile.ts:255
+msgid "Analista Universitario en Sistemas (Systems Analyst)"
+msgstr ""
+
+#: src/data/profile.ts:146
+msgid "At Pager Health I worked on member-facing conversational agents, first on Dialogflow and later migrated to Google's Agent Development Kit (ADK), with a Python service connecting them to the rest of the platform."
+msgstr ""
+
+#: src/data/profile.ts:161
+msgid "Authored the company's internationalization standard, then implemented it across backend and frontend services, adding Spanish and Portuguese for Latin-American and Brazilian markets."
+msgstr ""
+
+#: src/components/ProfileHeader.vue:43
+msgid "Availability"
+msgstr ""
+
+#: src/data/profile.ts:184
+msgid "Built and maintained an embeddable patient SDK, consumed by enterprise health-plan clients."
+msgstr ""
+
+#: src/data/profile.ts:225
+msgid "Built the technical practice from zero (development, hosting and infrastructure) for clients across several industries."
+msgstr ""
+
+#: src/components/SiteFooter.vue:24
+msgid "Built with"
+msgstr ""
+
+#: src/components/SiteFooter.vue:10
+msgid "Check"
+msgstr ""
+
+#: src/data/profile.ts:142
+msgid "Claude Code is my primary tool for analysis, technical design and implementation — I use it to draft RFCs, review code and work through cross-repo changes, and I'm comfortable writing agent skills and prompt-driven workflows rather than just prompting ad hoc."
+msgstr ""
+
+#: src/data/profile.ts:128
+msgid "Code review at scale"
+msgstr ""
+
+#: src/data/profile.ts:130
+msgid "Cross-team coordination"
+msgstr ""
+
+#: src/data/profile.ts:84
+msgid "Database"
+msgstr ""
+
+#: src/data/profile.ts:238
+msgid "DB Administration of large databases with +100 millions records tables."
+msgstr ""
+
+#: src/data/profile.ts:177
+msgid "Delivered WhatsApp Business as a member communication channel end to end across seven services: Twilio templated messages, configuration UI, routing and agent send flow."
+msgstr ""
+
+#: src/data/profile.ts:61
+msgid "Design systems & component libraries"
+msgstr ""
+
+#: src/data/profile.ts:214
+msgid "Developed complete solutions including: public website, web apps (pwa), mobile apps (android and ios), internal admin tools, backend, api's, databases and the infrastructure that serves them."
+msgstr ""
+
+#: src/components/SiteNav.vue:78
+msgid "Download CV"
+msgstr ""
+
+#: src/components/EducationLanguages.vue:11
+msgid "Education"
+msgstr ""
+
+#: src/ProfilePage.vue:41
+msgid "Education & Languages"
+msgstr ""
+
+#: src/data/profile.ts:62
+msgid "Embeddable SDKs & widgets"
+msgstr ""
+
+#: src/ProjectsPage.vue:28
+msgid "Employer and client work is described on the"
+msgstr ""
+
+#: src/data/profile.ts:272
+msgid "English"
+msgstr ""
+
+#: src/data/profile.ts:231
+msgid "Eniti Media SL (former Cenys Network SL)(extinct)"
+msgstr ""
+
+#: src/data/profile.ts:73
+msgid "Event-driven architecture (GCP Pub/Sub)"
+msgstr ""
+
+#: src/ProfilePage.vue:37
+msgid "Experience"
+msgstr ""
+
+#: src/data/profile.ts:274
+msgid "Five years working in English with a US-based team, written technical design, RFC and architecture review, and daily collaboration."
+msgstr ""
+
+#: src/data/profile.ts:120
+msgid "Flaky-test remediation"
+msgstr ""
+
+#: src/components/SiteFooter.vue:17
+msgid "for an online version of this document."
+msgstr ""
+
+#: src/data/profile.ts:205
+msgid "Formed when the software-development branch of Linked Comunicaciones merged with Soluciones yPunto, giving the combined company the capacity to take on larger clients."
+msgstr ""
+
+#: src/data/profile.ts:222
+msgid "Founding Partner & CTO"
+msgstr ""
+
+#: src/data/profile.ts:37
+msgid "I feel comfortable owning features during the whole lifecycle: from the early design to the implementation, monitoring and maintenance."
+msgstr ""
+
+#: src/data/profile.ts:17
+msgid "I own features end to end: design, data model, architecture, API, UI, and the underlying infrastructure."
+msgstr ""
+
+#: src/data/profile.ts:209
+msgid "I set technical direction and led delivery."
+msgstr ""
+
+#: src/data/profile.ts:34
+msgid "I'm a developer with almost 20 years of experience."
+msgstr ""
+
+#: src/data/profile.ts:145
+msgid "I've also built AI into the product, not just around it."
+msgstr ""
+
+#: src/data/profile.ts:35
+msgid "I've had the chance to work with diverse technologies during my career, but most of my experience was building on web technologies, that's why Lead Web Engineer title is what best describes me."
+msgstr ""
+
+#: src/data/profile.ts:131
+msgid "Incident root-cause analysis"
+msgstr ""
+
+#: src/data/profile.ts:97
+msgid "Infrastructure & CI/CD"
+msgstr ""
+
+#: src/data/profile.ts:262
+msgid "Ingeniería en Sistemas de Información — coursework through fifth year"
+msgstr ""
+
+#: src/data/profile.ts:258
+msgid "Intermediate degree of the Information Systems Engineering career."
+msgstr ""
+
+#: src/ProfilePage.vue:14
+msgid "Javier Melero — Lead Web Engineer"
+msgstr ""
+
+#: src/data/profile.ts:75
+msgid "JSON Schema contracts"
+msgstr ""
+
+#: src/components/EducationLanguages.vue:23
+msgid "Languages"
+msgstr ""
+
+#: src/data/profile.ts:14
+#: src/data/profile.ts:164
+msgid "Lead Web Engineer"
+msgstr ""
+
+#: src/data/profile.ts:124
+msgid "Leadership & Practice"
+msgstr ""
+
+#: src/data/profile.ts:168
+msgid "Led web engineering for a provider-search and appointment-scheduling application: authored the provider data-model RFC, implemented it, built the member-facing UI, and provisioned the Cloud Run service, Terraform modules and delivery pipelines to production."
+msgstr ""
+
+#: src/components/ProjectCard.vue:35
+msgid "Live"
+msgstr ""
+
+#: src/components/ProfileHeader.vue:36
+msgid "Location"
+msgstr ""
+
+#: src/components/SiteFooter.vue:37
+msgid "Made with"
+msgstr ""
+
+#: src/data/profile.ts:232
+msgid "Málaga, Spain / Santo Tomé, Argentina"
+msgstr ""
+
+#: src/ProjectsPage.vue:46
+msgid "Meanwhile you can check my github profile."
+msgstr ""
+
+#: src/data/profile.ts:129
+msgid "Mentoring"
+msgstr ""
+
+#: src/data/profile.ts:63
+msgid "Micro-frontend & plugin architectures"
+msgstr ""
+
+#: src/data/profile.ts:173
+msgid "Migrated member and agent video calling from Twilio to the Zoom Video SDK across five services, covering SDK core, embedded widget, agent console, Helm CSP policy and external consumer documentation."
+msgstr ""
+
+#: src/data/profile.ts:93
+msgid "Migrations"
+msgstr ""
+
+#: src/data/profile.ts:147
+msgid "More recently I helped ship an AI-powered search experience for our provider-search product, using Gemini 3.1 Flash Lite as the model behind it."
+msgstr ""
+
+#: src/data/profile.ts:213
+msgid "Moved from public/institutional website projects to complex systems that powered customers business for external and internal users."
+msgstr ""
+
+#: src/data/profile.ts:76
+msgid "Multi-tenancy & data-level tenancy scoping"
+msgstr ""
+
+#: src/data/profile.ts:270
+msgid "Native"
+msgstr ""
+
+#: src/data/profile.ts:248
+msgid "Network administration and configuration at the university's connectivity labs, alongside a research position in a math-applied program."
+msgstr ""
+
+#: src/data/profile.ts:23
+msgid "Open to remote roles · Available as an independent contractor"
+msgstr ""
+
+#: src/data/profile.ts:203
+msgid "Partner & CTO"
+msgstr ""
+
+#: src/lib/dates.ts:22
+msgid "Present"
+msgstr ""
+
+#: src/data/profile.ts:273
+msgid "Professional working proficiency"
+msgstr ""
+
+#: src/components/SiteNav.vue:36
+#: src/ProfilePage.vue:25
+msgid "Profile"
+msgstr ""
+
+#: src/ProjectsPage.vue:32
+msgid "profile page"
+msgstr ""
+
+#: src/data/profile.ts:233
+msgid "Project Manager"
+msgstr ""
+
+#: src/components/SiteNav.vue:48
+#: src/ProjectsPage.vue:25
+msgid "Projects"
+msgstr ""
+
+#: src/ProjectsPage.vue:15
+msgid "Projects — Javier Melero"
+msgstr ""
+
+#: src/data/profile.ts:226
+msgid "Published reusable components from client work as open source: CakePHP plugins, JavaScript libraries and upstream bug fixes."
+msgstr ""
+
+#: src/data/profile.ts:234
+msgid "Ran the web development department for a Spanish media company, working across two countries."
+msgstr ""
+
+#: src/data/profile.ts:154
+msgid "Remote — US company"
+msgstr ""
+
+#: src/data/profile.ts:72
+msgid "REST API design"
+msgstr ""
+
+#: src/data/profile.ts:127
+msgid "RFCs & written technical design"
+msgstr ""
+
+#: src/data/profile.ts:58
+msgid "SCSS / CSS architecture"
+msgstr ""
+
+#: src/ProjectsPage.vue:16
+msgid "Selected projects and open-source work by Javier Melero, lead web engineer."
+msgstr ""
+
+#: src/ProjectsPage.vue:27
+msgid "Selected work and open-source components."
+msgstr ""
+
+#: src/data/profile.ts:107
+msgid "semantic-release & npm package publishing"
+msgstr ""
+
+#: src/data/profile.ts:181
+msgid "Senior Front-end Engineer"
+msgstr ""
+
+#: src/data/profile.ts:237
+msgid "Services optimization for response time under heavy load."
+msgstr ""
+
+#: src/data/profile.ts:212
+msgid "Set technical direction and led delivery for client web projects, taking on engagements larger than either predecessor company had handled alone."
+msgstr ""
+
+#: src/ProfilePage.vue:29
+msgid "Skills"
+msgstr ""
+
+#: src/components/ExperienceList.vue:72
+msgid "Skills:"
+msgstr ""
+
+#: src/components/ProjectCard.vue:44
+msgid "Source"
+msgstr ""
+
+#: src/components/SiteFooter.vue:59
+msgid "Source code"
+msgstr ""
+
+#: src/components/SiteFooter.vue:64
+msgid "Source code on GitHub"
+msgstr ""
+
+#: src/data/profile.ts:270
+msgid "Spanish"
+msgstr ""
+
+#: src/data/profile.ts:158
+msgid "Staff Engineer"
+msgstr ""
+
+#: src/data/profile.ts:119
+msgid "Structured logging"
+msgstr ""
+
+#: src/components/SiteNav.vue:66
+msgid "Switch to dark theme"
+msgstr ""
+
+#: src/components/SiteNav.vue:66
+msgid "Switch to light theme"
+msgstr ""
+
+#: src/data/profile.ts:246
+msgid "Systems Administrator & Research Assistant"
+msgstr ""
+
+#: src/data/profile.ts:126
+msgid "Technical leadership"
+msgstr ""
+
+#: src/data/profile.ts:112
+msgid "Testing & Observability"
+msgstr ""
+
+#: src/data/profile.ts:38
+msgid "The last five years I've been working for a US digital-health company where I carried features across every layer they touched: data model, API, interface and the infrastructure underneath."
+msgstr ""
+
+#: src/components/ProfileHeader.vue:39
+msgid "Timezone"
+msgstr ""
+
+#: src/data/profile.ts:106
+msgid "Trunk-based development"
+msgstr ""
+
+#: src/data/profile.ts:187
+msgid "US digital-health company building virtual-care products for enterprise health plans and insurers."
+msgstr ""
+
+#: src/data/profile.ts:22
+msgid "UTC-3 · full overlap with US business hours"
+msgstr ""
+
+#: src/ProjectsPage.vue:44
+msgid "Work in progress."
+msgstr ""
+
+#: src/data/profile.ts:236
+msgid "Worked with internet ads, marketing campaigns and partner programs, massive e-mail campaigns (millions of e-mails sent per day)."
+msgstr ""
+
+#: src/lib/dates.ts:6
+msgctxt "month"
+msgid "Apr"
+msgstr ""
+
+#: src/lib/dates.ts:7
+msgctxt "month"
+msgid "Aug"
+msgstr ""
+
+#: src/lib/dates.ts:8
+msgctxt "month"
+msgid "Dec"
+msgstr ""
+
+#: src/lib/dates.ts:6
+msgctxt "month"
+msgid "Feb"
+msgstr ""
+
+#: src/lib/dates.ts:6
+msgctxt "month"
+msgid "Jan"
+msgstr ""
+
+#: src/lib/dates.ts:7
+msgctxt "month"
+msgid "Jul"
+msgstr ""
+
+#: src/lib/dates.ts:7
+msgctxt "month"
+msgid "Jun"
+msgstr ""
+
+#: src/lib/dates.ts:6
+msgctxt "month"
+msgid "Mar"
+msgstr ""
+
+#: src/lib/dates.ts:7
+msgctxt "month"
+msgid "May"
+msgstr ""
+
+#: src/lib/dates.ts:8
+msgctxt "month"
+msgid "Nov"
+msgstr ""
+
+#: src/lib/dates.ts:8
+msgctxt "month"
+msgid "Oct"
+msgstr ""
+
+#: src/lib/dates.ts:8
+msgctxt "month"
+msgid "Sep"
+msgstr ""

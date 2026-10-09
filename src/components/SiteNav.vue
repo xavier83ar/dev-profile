@@ -1,9 +1,20 @@
 <script setup lang="ts">
 import { useTheme } from "@/composables/useTheme";
+import { useLocale } from "@/composables/useLocale";
+import { computed } from "vue";
+import { __, LOCALES } from "@/i18n";
 
 defineProps<{ current: "profile" | "projects" }>();
 
 const { theme, ready, toggle } = useTheme();
+const { locale, next: nextLocale, toggle: toggleLocale } = useLocale();
+
+/** Built by scripts/generate-pdf.mjs, one per language. */
+const cv = computed(() =>
+  locale.value === "es"
+    ? { file: "cv-es.pdf", download: "javier-melero-cv-es.pdf" }
+    : { file: "cv.pdf", download: "javier-melero-cv.pdf" },
+);
 
 const base = import.meta.env.BASE_URL;
 </script>
@@ -22,7 +33,7 @@ const base = import.meta.env.BASE_URL;
               : 'text-muted hover:text-text'
           "
         >
-          Profile
+          {{ __("Profile") }}
         </a>
         <a
           :href="`${base}projects/`"
@@ -34,14 +45,25 @@ const base = import.meta.env.BASE_URL;
               : 'text-muted hover:text-text'
           "
         >
-          Projects
+          {{ __("Projects") }}
         </a>
       </div>
 
       <div class="flex items-center gap-2">
         <button
           type="button"
-          :aria-label="`Switch to ${theme === 'dark' ? 'light' : 'dark'} theme`"
+          :lang="nextLocale"
+          :aria-label="LOCALES[nextLocale]"
+          :title="LOCALES[nextLocale]"
+          class="rounded-full border border-line px-2.5 py-1.5 text-sm font-medium uppercase text-muted transition hover:text-text"
+          @click="toggleLocale"
+        >
+          {{ nextLocale }}
+        </button>
+
+        <button
+          type="button"
+          :aria-label="theme === 'dark' ? __('Switch to light theme') : __('Switch to dark theme')"
           class="rounded-full border border-line px-2.5 py-1.5 text-sm text-muted transition hover:text-text"
           @click="toggle"
         >
@@ -49,11 +71,11 @@ const base = import.meta.env.BASE_URL;
         </button>
 
         <a
-          :href="`${base}cv.pdf`"
-          download="javier-melero-cv.pdf"
+          :href="`${base}${cv.file}`"
+          :download="cv.download"
           class="rounded-full bg-accent-deep px-3.5 py-1.5 text-sm font-medium text-bg transition hover:opacity-90"
         >
-          Download CV
+          {{ __("Download CV") }}
         </a>
       </div>
     </div>

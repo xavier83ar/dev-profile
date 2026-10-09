@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { Project } from "@/data/types";
+import { __ } from "@/i18n";
 
 defineProps<{ project: Project }>();
 </script>
@@ -13,8 +14,8 @@ defineProps<{ project: Project }>();
 
     <ul v-if="project.highlights?.length" class="mt-2.5 space-y-1 text-sm text-muted">
       <li
-        v-for="highlight in project.highlights"
-        :key="highlight"
+        v-for="(highlight, index) in project.highlights"
+        :key="index"
         class="relative pl-4 before:absolute before:left-0 before:content-['–']"
       >
         {{ highlight }}
@@ -31,7 +32,7 @@ defineProps<{ project: Project }>();
         rel="noreferrer"
         class="text-accent-deep underline decoration-transparent underline-offset-4 transition hover:decoration-current"
       >
-        Live
+        {{ __("Live") }}
       </a>
       <a
         v-if="project.repo"
@@ -40,7 +41,7 @@ defineProps<{ project: Project }>();
         rel="noreferrer"
         class="text-accent-deep underline decoration-transparent underline-offset-4 transition hover:decoration-current"
       >
-        Source
+        {{ __("Source") }}
       </a>
     </p>
   </article>

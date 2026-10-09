@@ -2,6 +2,7 @@ import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import tailwindcss from "@tailwindcss/vite";
 import { fileURLToPath, URL } from "node:url";
+import poLoader from "./scripts/vite-plugin-po";
 
 /**
  * A multi-page build rather than a single-page app with a router.
@@ -21,7 +22,7 @@ import { fileURLToPath, URL } from "node:url";
  */
 export default defineConfig({
   base: "/",
-  plugins: [vue(), tailwindcss()],
+  plugins: [vue(), tailwindcss(), poLoader()],
   resolve: {
     alias: { "@": fileURLToPath(new URL("./src", import.meta.url)) },
   },

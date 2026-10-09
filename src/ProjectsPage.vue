@@ -1,12 +1,20 @@
 <script setup lang="ts">
 import { profile } from "@/data/profile";
 import { projects } from "@/data/projects";
+import { computed } from "vue";
+import { __ } from "@/i18n";
+import { useDocumentHead } from "@/composables/useDocumentHead";
 import SiteNav from "@/components/SiteNav.vue";
 import ProjectCard from "@/components/ProjectCard.vue";
 import SiteFooter from "@/components/SiteFooter.vue";
 
-const githubLink = profile.links.find((link) => link.url.includes("github.com"));
+const githubLink = computed(() => profile.value.links.find((link) => link.url.includes("github.com")));
 const base = import.meta.env.BASE_URL;
+
+useDocumentHead(() => ({
+  title: __("Projects — Javier Melero"),
+  description: __("Selected projects and open-source work by Javier Melero, lead web engineer."),
+}));
 </script>
 
 <template>
@@ -14,14 +22,14 @@ const base = import.meta.env.BASE_URL;
 
   <main class="mx-auto max-w-3xl px-4 pb-20 pt-12 sm:px-8 sm:pt-16">
     <header>
-      <h1 class="text-3xl font-semibold tracking-tight sm:text-4xl">Projects</h1>
+      <h1 class="text-3xl font-semibold tracking-tight sm:text-4xl">{{ __("Projects") }}</h1>
       <p class="mt-3 max-w-2xl leading-relaxed text-muted">
-        Selected work and open-source components. Employer and client work is
-        described on the
+        {{ __("Selected work and open-source components.") }}
+        {{ __("Employer and client work is described on the") }}
         <a
           :href="base"
           class="underline decoration-line underline-offset-4 transition hover:decoration-accent"
-          >profile page</a
+          >{{ __("profile page") }}</a
         >.
       </p>
     </header>
@@ -33,9 +41,9 @@ const base = import.meta.env.BASE_URL;
       v-else
       class="mt-10 rounded-lg border border-dashed border-line px-6 py-12 text-center"
     >
-      <p class="font-medium">Work in progress.</p>
+      <p class="font-medium">{{ __("Work in progress.") }}</p>
       <p class="mx-auto mt-2 max-w-md leading-relaxed text-muted">
-        Meanwhile you can check my github profile.
+        {{ __("Meanwhile you can check my github profile.") }}
       </p>
       <a
         v-if="githubLink"

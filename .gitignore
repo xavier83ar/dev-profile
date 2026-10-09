@@ -4,6 +4,9 @@ dist/
 .DS_Store
 .vite/
 .idea/
+# Compiled gettext catalogs, as PO editors like Poedit write on save. The build
+# reads the .po files directly.
+*.mo
 
 # ─────────────────────────────────────────────────────────────────────────────
 # NEVER COMMIT. This repository is published to GitHub Pages, so anything

@@ -10,15 +10,22 @@
     "preview": "vite preview",
     "typecheck": "vue-tsc --noEmit",
     "pdf": "npm run build && node scripts/generate-pdf.mjs",
-    "pdf:verify": "pdftotext -layout public/cv.pdf -"
+    "pdf:verify": "pdftotext -layout public/cv.pdf -",
+    "pdf:verify:es": "pdftotext -layout public/cv-es.pdf -",
+    "i18n:extract": "node scripts/i18n-extract.mjs",
+    "i18n:update": "node scripts/i18n-update.mjs"
   },
   "dependencies": {
+    "gettext.js": "^2.0.3",
     "vue": "^3.5.13"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.0.0",
+    "@types/gettext-parser": "^9.0.0",
     "@types/node": "^26.6.2",
     "@vitejs/plugin-vue": "^5.2.1",
+    "gettext-extractor": "^4.0.6",
+    "gettext-parser": "^9.1.1",
     "tailwindcss": "^4.0.0",
     "typescript": "~5.7.3",
     "vite": "^6.0.11",

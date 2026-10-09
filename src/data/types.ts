@@ -3,6 +3,9 @@
  *
  * `profile.ts` and `projects.ts` are the only places content lives. Components
  * render these structures; they never contain sentences of their own.
+ *
+ * Every field holds display text, already translated: the content is built
+ * with `__()` in the active language, so components never translate it.
  */
 
 /** Glyphs available in Icon.vue. */
