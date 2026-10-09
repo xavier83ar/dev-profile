@@ -84,12 +84,17 @@ catalog. Other languages are GNU gettext `.po` files in
 [`src/locales/`](src/locales/), loaded at runtime by
 [gettext.js](https://github.com/guillaumepotier/gettext.js/).
 
-- Components translate with `__()`, `_n()` (plurals) and `_p()` (context),
-  from [`src/i18n`](src/i18n/index.ts).
-- Content in `src/data/` is marked with `N_()` and translated where it is
-  rendered. Prose is kept as one msgid per sentence (`Sentences`), so rewording
-  one sentence leaves the rest of its paragraph translated.
-- Product and technology names are left unmarked and render as is.
+- Text is translated with `__()`, `_n()` (plurals) and `_p()` (context), from
+  [`src/i18n`](src/i18n/index.ts), always with a string literal: the extractor
+  only sees literals, so a translation looked up from a variable would never
+  reach the catalog.
+- That includes the content: `profile` and `projects` in `src/data/` are Vue
+  `computed`s written with `__()` calls, rebuilt when the language changes, so
+  components receive text that is already translated.
+- Prose is one `__()` per sentence, joined with `paragraph()`, so rewording one
+  sentence leaves the rest of its paragraph translated.
+- Product and technology names are not wrapped and render as is.
+- Each page sets its translated title and description with `useDocumentHead`.
 
 After changing any text:
 

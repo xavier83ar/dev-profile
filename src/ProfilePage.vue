@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { profile } from "@/data/profile";
-import { __, __sentences } from "@/i18n";
+import { __ } from "@/i18n";
+import { useDocumentHead } from "@/composables/useDocumentHead";
 import SiteNav from "@/components/SiteNav.vue";
 import ProfileHeader from "@/components/ProfileHeader.vue";
 import SectionBlock from "@/components/SectionBlock.vue";
@@ -8,6 +9,11 @@ import SkillGroups from "@/components/SkillGroups.vue";
 import ExperienceList from "@/components/ExperienceList.vue";
 import EducationLanguages from "@/components/EducationLanguages.vue";
 import SiteFooter from "@/components/SiteFooter.vue";
+
+useDocumentHead(() => ({
+  title: __("Javier Melero — Lead Web Engineer"),
+  description: __("Almost 20 years building for the web. I own features end to end: design, data model, architecture, API, UI, and the underlying infrastructure."),
+}));
 </script>
 
 <template>
@@ -17,7 +23,7 @@ import SiteFooter from "@/components/SiteFooter.vue";
     <ProfileHeader :profile="profile" />
 
     <SectionBlock id="summary" :title="__('Profile')">
-      <p class="max-w-3xl leading-relaxed text-muted mb-3" v-for="summaryLine of profile.summary">{{ __sentences(summaryLine) }}</p>
+      <p class="max-w-3xl leading-relaxed text-muted mb-3" v-for="summaryLine of profile.summary">{{ summaryLine }}</p>
     </SectionBlock>
 
     <SectionBlock id="skills" :title="__('Skills')">
@@ -25,7 +31,7 @@ import SiteFooter from "@/components/SiteFooter.vue";
     </SectionBlock>
 
     <SectionBlock id="ai" :title="__('AI')">
-      <p class="max-w-3xl leading-relaxed text-muted mb-3" v-for="paragraph of profile.ai">{{ __sentences(paragraph) }}</p>
+      <p class="max-w-3xl leading-relaxed text-muted mb-3" v-for="paragraph of profile.ai">{{ paragraph }}</p>
     </SectionBlock>
 
     <SectionBlock id="experience" :title="__('Experience')">

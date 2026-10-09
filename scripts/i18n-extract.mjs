@@ -4,8 +4,9 @@
  *   npm run i18n:extract
  *
  * The xgettext step of the GNU workflow. It writes `src/locales/messages.pot`
- * from every call to `__`, `_n`, `_p` and `N_` in `src/`, plus the page titles
- * and descriptions in the HTML entry points.
+ * from every call to `__`, `_n` and `_p` in `src/`. Only string literals are
+ * extracted, which is why the content in `src/data/` is written with `__()`
+ * calls rather than translated from variables at render time.
  *
  * xgettext cannot read `.vue` files, which is why this is a script: each
  * single-file component is split with Vue's own compiler, its `<script>` blocks
@@ -14,7 +15,7 @@
  * `#:` references in the catalog point at the real source line.
  */
 
-import { GettextExtractor, JsExtractors, HtmlExtractors } from "gettext-extractor";
+import { GettextExtractor, JsExtractors } from "gettext-extractor";
 import { parse } from "vue/compiler-sfc";
 import { readFile, readdir } from "node:fs/promises";
 import { relative } from "node:path";
@@ -31,14 +32,9 @@ const DIRECTIVE = 7;
 const extractor = new GettextExtractor();
 
 const js = extractor.createJsParser([
-  JsExtractors.callExpression(["__", "N_"], { arguments: { text: 0 } }),
+  JsExtractors.callExpression("__", { arguments: { text: 0 } }),
   JsExtractors.callExpression("_n", { arguments: { text: 0, textPlural: 1 } }),
   JsExtractors.callExpression("_p", { arguments: { context: 0, text: 1 } }),
-]);
-
-const html = extractor.createHtmlParser([
-  HtmlExtractors.elementContent("title"),
-  HtmlExtractors.elementAttribute('meta[name="description"]', "content"),
 ]);
 
 const sources = (await readdir(`${root}src`, { recursive: true }))
@@ -71,10 +67,6 @@ for (const file of sources.filter((f) => f.endsWith(".vue"))) {
   for (const exp of expressions) {
     js.parseString(exp.content, file, { lineNumberStart: exp.loc.start.line });
   }
-}
-
-for (const file of ["index.html", "projects/index.html"]) {
-  html.parseString(await readFile(`${root}${file}`, "utf-8"), file);
 }
 
 extractor.savePotFile(`${root}${POT}`, {

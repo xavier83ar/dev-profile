@@ -1,13 +1,20 @@
 <script setup lang="ts">
 import { profile } from "@/data/profile";
 import { projects } from "@/data/projects";
+import { computed } from "vue";
 import { __ } from "@/i18n";
+import { useDocumentHead } from "@/composables/useDocumentHead";
 import SiteNav from "@/components/SiteNav.vue";
 import ProjectCard from "@/components/ProjectCard.vue";
 import SiteFooter from "@/components/SiteFooter.vue";
 
-const githubLink = profile.links.find((link) => link.url.includes("github.com"));
+const githubLink = computed(() => profile.value.links.find((link) => link.url.includes("github.com")));
 const base = import.meta.env.BASE_URL;
+
+useDocumentHead(() => ({
+  title: __("Projects — Javier Melero"),
+  description: __("Selected projects and open-source work by Javier Melero, lead web engineer."),
+}));
 </script>
 
 <template>

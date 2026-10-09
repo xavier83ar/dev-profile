@@ -8,17 +8,17 @@ defineProps<{ project: Project }>();
 <template>
   <article class="rounded-lg border border-line bg-surface p-5">
     <h3 class="font-semibold">{{ project.name }}</h3>
-    <p v-if="project.role" class="mt-0.5 text-sm text-subtle">{{ __(project.role) }}</p>
+    <p v-if="project.role" class="mt-0.5 text-sm text-subtle">{{ project.role }}</p>
 
-    <p class="mt-2 leading-relaxed text-muted">{{ __(project.description) }}</p>
+    <p class="mt-2 leading-relaxed text-muted">{{ project.description }}</p>
 
     <ul v-if="project.highlights?.length" class="mt-2.5 space-y-1 text-sm text-muted">
       <li
-        v-for="highlight in project.highlights"
-        :key="highlight"
+        v-for="(highlight, index) in project.highlights"
+        :key="index"
         class="relative pl-4 before:absolute before:left-0 before:content-['–']"
       >
-        {{ __(highlight) }}
+        {{ highlight }}
       </li>
     </ul>
 

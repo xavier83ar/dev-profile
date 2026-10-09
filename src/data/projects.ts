@@ -1,3 +1,4 @@
+import { computed } from "vue";
 import type { Project } from "./types";
 
 /**
@@ -5,9 +6,12 @@ import type { Project } from "./types";
  *
  * Secondary to the profile, and deliberately excluded from the CV PDF.
  * Content still to come — the page renders an empty state until this is filled.
+ *
+ * A computed for the same reason as `profile`: entries are written with `__()`
+ * and rebuilt when the language changes.
  */
 
-export const projects: Project[] = [
+export const projects = computed<Project[]>(() => [
   // TODO: your projects. For each one, the questions worth answering are:
   //   · What is it, in one sentence, for someone who has never seen it?
   //   · What did you actually build or decide?
@@ -16,4 +20,4 @@ export const projects: Project[] = [
   //
   // Open-source work from the Linked/yPunto years (CakePHP plugins, JavaScript
   // libraries) is on github.com/xavier83ar and would fit here well.
-];
+]);

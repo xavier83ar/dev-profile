@@ -67,19 +67,11 @@ export function _p(msgctxt: string, msgid: string, ...args: unknown[]): string {
 }
 
 /**
- * gettext_noop: marks a string for extraction without translating it.
+ * Joins already-translated sentences into a paragraph.
  *
- * Content in `src/data/` is evaluated once, at import, so it cannot be
- * translated there; it is marked here and translated where it is rendered.
+ * Prose is written as one `__()` per sentence, so rewording a sentence
+ * invalidates that sentence in the catalogs rather than its whole paragraph.
  */
-export function N_<T extends string>(msgid: T): T {
-  return msgid;
-}
-
-/** A paragraph kept as one msgid per sentence, so an edit invalidates one sentence, not the paragraph. */
-export type Sentences = string[];
-
-/** Translates each sentence and joins them back into a paragraph. */
-export function __sentences(sentences: Sentences): string {
-  return sentences.map((sentence) => __(sentence)).join(" ");
+export function paragraph(...sentences: string[]): string {
+  return sentences.join(" ");
 }
