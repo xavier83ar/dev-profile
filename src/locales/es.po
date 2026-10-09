@@ -4,8 +4,13 @@ msgstr ""
 "Language-Team: Spanish\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
 "Language: es\n"
+"MIME-Version: 1.0\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.9\n"
 
 #: src/components/ExperienceList.vue:29
 msgid "%1 logo"
@@ -631,59 +636,59 @@ msgstr ""
 #: src/lib/dates.ts:6
 msgctxt "month"
 msgid "Apr"
-msgstr "abr"
+msgstr "Abr"
 
 #: src/lib/dates.ts:7
 msgctxt "month"
 msgid "Aug"
-msgstr "ago"
+msgstr "Ago"
 
 #: src/lib/dates.ts:8
 msgctxt "month"
 msgid "Dec"
-msgstr "dic"
+msgstr "Dic"
 
 #: src/lib/dates.ts:6
 msgctxt "month"
 msgid "Feb"
-msgstr "feb"
+msgstr "Feb"
 
 #: src/lib/dates.ts:6
 msgctxt "month"
 msgid "Jan"
-msgstr "ene"
+msgstr "Ene"
 
 #: src/lib/dates.ts:7
 msgctxt "month"
 msgid "Jul"
-msgstr "jul"
+msgstr "Jul"
 
 #: src/lib/dates.ts:7
 msgctxt "month"
 msgid "Jun"
-msgstr "jun"
+msgstr "Jun"
 
 #: src/lib/dates.ts:6
 msgctxt "month"
 msgid "Mar"
-msgstr "mar"
+msgstr "Mar"
 
 #: src/lib/dates.ts:7
 msgctxt "month"
 msgid "May"
-msgstr "may"
+msgstr "May"
 
 #: src/lib/dates.ts:8
 msgctxt "month"
 msgid "Nov"
-msgstr "nov"
+msgstr "Nov"
 
 #: src/lib/dates.ts:8
 msgctxt "month"
 msgid "Oct"
-msgstr "oct"
+msgstr "Oct"
 
 #: src/lib/dates.ts:8
 msgctxt "month"
 msgid "Sep"
-msgstr "sep"
+msgstr "Sep"
