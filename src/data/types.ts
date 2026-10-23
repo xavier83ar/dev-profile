@@ -95,7 +95,7 @@ export type Profile = {
   tagline: string;
   location: string;
   /**
-   * Filename of a square portrait in `public/`, resolved against the site base.
+   * Filename of a portrait in `public/`, resolved against the site base.
    * Screen only — it is deliberately kept off the CV, where a photo invites
    * the bias that US hiring convention exists to avoid.
    */

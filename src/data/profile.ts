@@ -18,7 +18,7 @@ export const profile = computed<Profile>(() => ({
   ),
 
   location: "Santa Fe, Argentina",
-  photo: "profile-photo.jpg",
+  photo: "profile-photo-cutout.png",
   timezone: __("UTC-3 · full overlap with US business hours"),
   availability: __("Open to remote roles · Available as an independent contractor"),
   email: "ricmelero@gmail.com",

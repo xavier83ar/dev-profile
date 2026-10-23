@@ -27,9 +27,8 @@ const base = import.meta.env.BASE_URL;
       <div class="hero-art no-print" aria-hidden="true">
         <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
         <Icon class="art-cross" name="plus-lg" /><Icon class="art-code" name="code-slash" />
-        <div class="portrait-frame">
-          <img v-if="profile.photo" :src="`${base}${profile.photo}`" alt="" width="400" height="400" decoding="async" class="hero-portrait" />
-          <span class="portrait-caption">{{ profile.name }} <Icon name="arrow-up-right" /></span>
+        <div class="portrait-figure">
+          <img v-if="profile.photo" :src="`${base}${profile.photo}`" alt="" width="1024" height="1536" decoding="async" class="hero-portrait" />
         </div>
         <span class="art-sticker"><Icon name="code-slash" /><span>{{ __('From idea to production') }}</span></span>
       </div>
