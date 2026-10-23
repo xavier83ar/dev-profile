@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "bootstrap-icons/font/bootstrap-icons.css";
 
 /* ───────────────────────────────────────────────────────────────────────────
    Tokens
@@ -115,7 +116,10 @@ h3 {
 
 /* Screen composition: electric blue, acid lime, and neutral ink. */
 @media screen {
-  .graphic-icon { display: inline-block; width: 24px; height: 24px; flex-shrink: 0; vertical-align: middle; }
+  .icon { display: inline-block; width: 1em; height: 1em; flex-shrink: 0; vertical-align: -.125em; line-height: 1; }
+  .icon.bi::before { display: block; line-height: 1; vertical-align: 0; }
+  .icon-custom { background-color: currentColor; mask: var(--icon-source) center / contain no-repeat; }
+
   .site-nav-inner { max-width: 1480px; min-height: 72px; padding: 14px 48px; }
   .site-nav { background: color-mix(in srgb, var(--bg) 92%, transparent); }
   .site-nav a, .site-nav button { border-radius: 5px; }
@@ -149,7 +153,7 @@ h3 {
   .hero-portrait { width: 100%; height: 280px; object-fit: cover; filter: grayscale(1) contrast(1.06); }
   .portrait-caption { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 14px 8px 7px; font-family: monospace; font-size: .8rem; }
   .art-sticker { position: absolute; right: -6px; bottom: 35px; display: flex; align-items: center; gap: 12px; width: 190px; padding: 17px; border-radius: 6px; background: #d9fc67; color: #181b0e; font-size: .85rem; line-height: 1.4; font-weight: 600; transform: rotate(5deg); box-shadow: 0 8px 32px #00000015; }
-  .art-sticker .graphic-icon { width: 30px; height: 30px; }
+  .art-sticker .icon { font-size: 30px; }
   .hero-bottom { min-width: 0; }
   .hero-contact { display: flex; flex-wrap: wrap; gap: 12px 24px; padding-bottom: 22px; font-size: .72rem; color: var(--muted); }
   .hero-contact a { display: inline-flex; gap: 7px; align-items: center; transition: color .2s; overflow-wrap: anywhere; }
@@ -160,10 +164,10 @@ h3 {
   .featured-heading a { color: var(--accent-deep); font-size: 1.3rem; line-height: 1; }
   .featured-skills { display: grid; grid-template-columns: repeat(10, minmax(0, 1fr)); gap: 14px; }
   .featured-skills li { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; font-size: .69rem; line-height: 1.35; font-weight: 500; }
-  .featured-skills .graphic-icon { width: 28px; height: 28px; color: var(--accent-deep); }
-  .featured-skills li:nth-child(3n + 2) .graphic-icon { color: var(--text); }
+  .featured-skills .icon { font-size: 28px; color: var(--accent-deep); }
+  .featured-skills li:nth-child(3n + 2) .icon { color: var(--text); }
   .scroll-cue { display: flex; align-items: center; justify-content: space-between; padding: 13px 0; border-top: 1px solid var(--border); color: var(--muted); text-transform: uppercase; font-size: .6rem; letter-spacing: .16em; }
-  .scroll-cue > span:last-child { color: var(--accent-deep); font-size: 1.1rem; }
+  .scroll-cue > .icon { color: var(--accent-deep); font-size: 1.1rem; }
   .profile-layout { max-width: 1480px; margin: 0 auto; padding: 100px 48px 120px; display: grid; grid-template-columns: 175px minmax(0, 1fr); gap: 68px; }
   .profile-content { min-width: 0; }
   .section-nav { position: sticky; top: 120px; }
@@ -179,7 +183,7 @@ h3 {
   .section-title-row { display: flex; align-items: baseline; gap: 16px; margin-bottom: 38px; }
   .section-index { color: var(--accent-deep); font-family: monospace; font-size: .75rem; white-space: nowrap; }
   .section-heading { font-size: clamp(2.2rem, 4.5vw, 4rem); font-weight: 600; line-height: 1.05; letter-spacing: -.055em; }
-  .section-symbol { align-self: center; margin-left: auto; color: var(--accent-deep); width: 32px; height: 32px; }
+  .section-symbol { align-self: center; margin-left: auto; color: var(--accent-deep); font-size: 32px; }
   .section-body p, .section-body li { line-height: 1.8; }
   #summary .section-body { padding-left: 50px; border-left: 3px solid var(--accent-deep); }
   #summary .section-body p:first-child { color: var(--text); font-size: clamp(1.15rem, 1.8vw, 1.5rem); line-height: 1.6; margin-bottom: 24px; }
@@ -213,7 +217,7 @@ h3 {
   .period-separator { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
   .period-arrow { color: var(--accent-deep); }
   .period-duration { display: inline-flex; align-items: center; gap: 5px; padding: 3px 8px; border-radius: 4px; color: var(--accent-deep); background: var(--chip); white-space: nowrap; }
-  .period-duration svg { width: 13px; height: 13px; }
+  .period-duration .icon { font-size: 13px; }
   .education-panels { gap: 16px; }
   .education-panels > div { padding: 28px; border: 1px solid var(--border); border-radius: 10px; background: var(--surface); }
   .education-panels h3 { font-family: monospace; text-transform: uppercase; letter-spacing: .1em; font-size: .7rem; color: var(--accent-deep); margin-bottom: 24px; }
@@ -235,7 +239,7 @@ h3 {
     .art-sticker { right: -6px; bottom: 4px; width: 165px; font-size: .75rem; }
     .featured-skills { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 18px; }
     .featured-skills li { flex-direction: row; align-items: center; }
-    .featured-skills .graphic-icon { width: 23px; height: 23px; }
+    .featured-skills .icon { font-size: 23px; }
   }
   @media (max-width: 767px) {
     .site-nav-inner { min-height: 64px; padding: 12px 20px; }
@@ -256,7 +260,7 @@ h3 {
     .art-cross { top: 5px; right: 5%; font-size: 3rem; }
     .art-code { font-size: 2rem; left: 2%; bottom: 24px; }
     .art-sticker { width: 140px; padding: 12px; right: 0; bottom: 10px; font-size: .7rem; }
-    .art-sticker .graphic-icon { width: 24px; height: 24px; }
+    .art-sticker .icon { font-size: 24px; }
     .hero-contact { font-size: .68rem; gap: 12px 16px; }
     .featured-skills { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px 10px; }
     .featured-skills li { font-size: .64rem; flex-direction: column; align-items: flex-start; gap: 7px; }
@@ -265,7 +269,7 @@ h3 {
     .section-title-row { gap: 10px; margin-bottom: 28px; }
     .section-heading { font-size: clamp(2rem, 7.6vw, 3.2rem); }
     .section-index { font-size: .6rem; }
-    .section-symbol { width: 26px; height: 26px; }
+    .section-symbol { font-size: 26px; }
     #summary .section-body { padding-left: 22px; }
     .skill-groups { grid-template-columns: 1fr; }
     .skill-group { padding: 24px; }

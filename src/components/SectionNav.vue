@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import Icon from "./Icon.vue";
 import { computed, onMounted, onUnmounted, ref } from "vue";
 import { __ } from "@/i18n";
 
@@ -45,7 +46,7 @@ onUnmounted(() => {
         :aria-current="active === section.id ? 'location' : undefined">
         <span class="section-nav-number" aria-hidden="true">0{{ index + 1 }}</span>{{ section.label }}
       </a>
-      <a class="back-top" href="#profile-hero">{{ __('Back to top') }} <span aria-hidden="true">↑</span></a>
+      <a class="back-top" href="#profile-hero">{{ __('Back to top') }} <Icon name="arrow-up" /></a>
     </nav>
   </aside>
 </template>

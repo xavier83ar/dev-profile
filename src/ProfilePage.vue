@@ -27,23 +27,23 @@ useDocumentHead(() => ({
       <SectionNav />
       <div class="profile-content print-flat">
 
-        <SectionBlock id="summary" number="01" icon="profile" :title="__('Profile')">
+        <SectionBlock id="summary" number="01" icon="person-badge" :title="__('Profile')">
           <p class="max-w-3xl leading-relaxed text-muted mb-3" v-for="summaryLine of profile.summary">{{ summaryLine }}</p>
         </SectionBlock>
 
-        <SectionBlock id="skills" number="02" icon="code" :title="__('Skills')">
+        <SectionBlock id="skills" number="02" icon="code-slash" :title="__('Skills')">
           <SkillGroups :description="profile.skills.description" :groups="profile.skills.groups" />
         </SectionBlock>
 
-        <SectionBlock id="ai" number="03" icon="sparkles" :title="__('AI')">
+        <SectionBlock id="ai" number="03" icon="custom:sparkles" :title="__('AI')">
           <p class="max-w-3xl leading-relaxed text-muted mb-3" v-for="paragraph of profile.ai">{{ paragraph }}</p>
         </SectionBlock>
 
-        <SectionBlock id="experience" number="04" icon="experience" :title="__('Experience')">
+        <SectionBlock id="experience" number="04" icon="briefcase" :title="__('Experience')">
           <ExperienceList :experience="profile.experience" />
         </SectionBlock>
 
-        <SectionBlock id="education" number="05" icon="education" :title="__('Education & Languages')">
+        <SectionBlock id="education" number="05" icon="mortarboard" :title="__('Education & Languages')">
           <EducationLanguages
             :education="profile.education"
             :languages="profile.languages"

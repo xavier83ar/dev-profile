@@ -16,6 +16,7 @@
     "i18n:update": "node scripts/i18n-update.mjs"
   },
   "dependencies": {
+    "bootstrap-icons": "^1.13.2",
     "gettext.js": "^2.0.3",
     "vue": "^3.5.13"
   },

@@ -8,20 +8,10 @@
  * with `__()` in the active language, so components never translate it.
  */
 
-/** Configurable symbols for featured skills and section headings. */
-export type GraphicIconName = "typescript" | "react" | "next" | "vue" | "node" | "nest" | "database" | "layers" | "code" | "leadership" | "profile" | "sparkles" | "experience" | "education";
-export type FeaturedSkill = { label: string; icon: GraphicIconName };
-
-/** Glyphs available in Icon.vue. */
-export type IconName =
-  | "github"
-  | "linkedin"
-  | "email"
-  | "phone"
-  | "claude"
-  | "vue"
-  | "tailwind"
-  | "company";
+/** Bootstrap names are inferred from the installed library, without a manual list. */
+import type bootstrapIcons from "bootstrap-icons/font/bootstrap-icons.json";
+export type IconName = keyof typeof bootstrapIcons | `custom:${string}`;
+export type FeaturedSkill = { label: string; icon: IconName };
 
 export type Link = {
   /** Shown as the link text. Printed in full in the PDF. */

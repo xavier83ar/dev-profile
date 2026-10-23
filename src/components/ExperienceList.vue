@@ -23,7 +23,7 @@ const base = import.meta.env.BASE_URL;
           v-else
           class="no-print flex size-10 items-center justify-center rounded-full bg-accent-deep text-bg text-lg"
         >
-          <Icon name="company" />
+          <Icon name="briefcase" />
         </div>
       </div>
 

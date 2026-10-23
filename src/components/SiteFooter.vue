@@ -29,7 +29,7 @@ const REPO_URL = "https://github.com/xavier83ar/dev-profile";
           aria-label="Claude"
           class="transition hover:text-accent-deep"
         >
-          <Icon name="claude" />
+          <Icon name="custom:claude" />
         </a>
       </span>
 
@@ -42,7 +42,7 @@ const REPO_URL = "https://github.com/xavier83ar/dev-profile";
           aria-label="Vue.js"
           class="transition hover:text-accent-deep"
         >
-          <Icon name="vue" />
+          <Icon name="custom:vuejs" />
         </a>
         <a
           href="https://tailwindcss.com"
@@ -51,7 +51,7 @@ const REPO_URL = "https://github.com/xavier83ar/dev-profile";
           aria-label="Tailwind CSS"
           class="transition hover:text-accent-deep"
         >
-          <Icon name="tailwind" />
+          <Icon name="custom:tailwind" />
         </a>
       </span>
 

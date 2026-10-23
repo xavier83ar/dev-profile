@@ -41,15 +41,15 @@ export const profile = computed<Profile>(() => ({
   skills: {
     featured: [
       { label: "TypeScript", icon: "typescript" },
-      { label: "React", icon: "react" },
-      { label: "Next.js", icon: "next" },
-      { label: "Vue", icon: "vue" },
-      { label: "Node.js", icon: "node" },
-      { label: "NestJS", icon: "nest" },
+      { label: "React", icon: "custom:react" },
+      { label: "Next.js", icon: "custom:nextjs" },
+      { label: "Vue", icon: "custom:vuejs" },
+      { label: "Node.js", icon: "custom:nodejs" },
+      { label: "NestJS", icon: "custom:nestjs" },
       { label: "PostgreSQL", icon: "database" },
       { label: __("Design systems"), icon: "layers" },
-      { label: __("Embeddable SDKs"), icon: "code" },
-      { label: __("Technical leadership"), icon: "leadership" },
+      { label: __("Embeddable SDKs"), icon: "code-slash" },
+      { label: __("Technical leadership"), icon: "people" },
     ],
     description: __(
       "Although I've been focused on front end and web technologies, " +
