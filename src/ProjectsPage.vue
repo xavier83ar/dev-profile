@@ -20,7 +20,7 @@ useDocumentHead(() => ({
 <template>
   <SiteNav current="projects" />
 
-  <main class="mx-auto max-w-3xl px-4 pb-20 pt-12 sm:px-8 sm:pt-16">
+  <main class="projects-shell mx-auto px-4 pb-20 pt-12 sm:px-8 sm:pt-16">
     <header>
       <h1 class="text-3xl font-semibold tracking-tight sm:text-4xl">{{ __("Projects") }}</h1>
       <p class="mt-3 max-w-2xl leading-relaxed text-muted">

@@ -2,6 +2,7 @@
 import { profile } from "@/data/profile";
 import { __ } from "@/i18n";
 import { useDocumentHead } from "@/composables/useDocumentHead";
+import SectionNav from "@/components/SectionNav.vue";
 import SiteNav from "@/components/SiteNav.vue";
 import ProfileHeader from "@/components/ProfileHeader.vue";
 import SectionBlock from "@/components/SectionBlock.vue";
@@ -19,31 +20,37 @@ useDocumentHead(() => ({
 <template>
   <SiteNav current="profile" />
 
-  <main class="print-flat mx-auto max-w-3xl px-4 pb-20 pt-12 sm:px-8 sm:pt-16">
+  <main class="profile-shell print-flat">
     <ProfileHeader :profile="profile" />
 
-    <SectionBlock id="summary" :title="__('Profile')">
-      <p class="max-w-3xl leading-relaxed text-muted mb-3" v-for="summaryLine of profile.summary">{{ summaryLine }}</p>
-    </SectionBlock>
+    <div class="profile-layout print-flat">
+      <SectionNav />
+      <div class="profile-content print-flat">
 
-    <SectionBlock id="skills" :title="__('Skills')">
-      <SkillGroups :description="profile.skills.description" :groups="profile.skills.groups" />
-    </SectionBlock>
+        <SectionBlock id="summary" number="01" icon="profile" :title="__('Profile')">
+          <p class="max-w-3xl leading-relaxed text-muted mb-3" v-for="summaryLine of profile.summary">{{ summaryLine }}</p>
+        </SectionBlock>
 
-    <SectionBlock id="ai" :title="__('AI')">
-      <p class="max-w-3xl leading-relaxed text-muted mb-3" v-for="paragraph of profile.ai">{{ paragraph }}</p>
-    </SectionBlock>
+        <SectionBlock id="skills" number="02" icon="code" :title="__('Skills')">
+          <SkillGroups :description="profile.skills.description" :groups="profile.skills.groups" />
+        </SectionBlock>
 
-    <SectionBlock id="experience" :title="__('Experience')">
-      <ExperienceList :experience="profile.experience" />
-    </SectionBlock>
+        <SectionBlock id="ai" number="03" icon="sparkles" :title="__('AI')">
+          <p class="max-w-3xl leading-relaxed text-muted mb-3" v-for="paragraph of profile.ai">{{ paragraph }}</p>
+        </SectionBlock>
 
-    <SectionBlock id="education" :title="__('Education & Languages')">
-      <EducationLanguages
-        :education="profile.education"
-        :languages="profile.languages"
-      />
-    </SectionBlock>
+        <SectionBlock id="experience" number="04" icon="experience" :title="__('Experience')">
+          <ExperienceList :experience="profile.experience" />
+        </SectionBlock>
+
+        <SectionBlock id="education" number="05" icon="education" :title="__('Education & Languages')">
+          <EducationLanguages
+            :education="profile.education"
+            :languages="profile.languages"
+          />
+        </SectionBlock>
+      </div>
+    </div>
   </main>
 
   <SiteFooter />

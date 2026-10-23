@@ -5,14 +5,14 @@ defineProps<{ description: string; groups: SkillGroup[] }>();
 </script>
 
 <template>
-  <div class="print-compact space-y-3.5">
+  <div class="skill-groups print-compact">
     <p class="max-w-3xl leading-relaxed text-muted mb-3">{{ description }}</p>
     <div
       v-for="(group, index) in groups"
       :key="index"
-      class="print-keep print-row grid gap-1.5 sm:grid-cols-[11rem_1fr] sm:gap-4"
+      class="skill-group print-keep print-row"
     >
-      <h3 class="pt-1 text-sm font-semibold">{{ group.group }}</h3>
+      <h3 class="pt-1 text-sm font-semibold"><span class="skill-group-number no-print">0{{ index + 1 }}</span>{{ group.group }}</h3>
       <ul class="print-inline-list flex flex-wrap gap-1.5">
         <li
           v-for="(item, index) in group.items"

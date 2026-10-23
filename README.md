@@ -36,6 +36,27 @@ Clean URLs on GitHub Pages with no SPA-fallback trick, and the PDF pipeline
 points at `index.html` alone — so the portfolio is excluded from the CV
 structurally, not by a print rule that can rot.
 
+## Visual layout
+
+The opening fills at least the first viewport (including the top navigation),
+with a large typographic headline, portrait composition and featured skills.
+On smaller screens and short viewports it grows with its content, so nothing is
+clipped or hidden behind a fixed height.
+
+Edit `profile.skills.featured` in `src/data/profile.ts` to configure up to ten
+skills. Each entry has a `label` and an `icon` from the typed `GraphicIconName`
+set in `src/data/types.ts`; symbols are local inline SVGs in `GraphicIcon.vue`.
+The complete skill inventory remains in `skills.groups`.
+
+Neutral light/dark surfaces, electric blue and lime form the screen palette.
+Profile, Skills, AI, Experience and Education each use a distinct composition.
+At widths of 1200px and above, a sticky section menu appears after the hero
+scrolls behind the top bar and tracks the current section.
+
+Experience dates and durations share `ExperiencePeriod.vue`. Screen decoration,
+featured skills and section icons are excluded from print; the same profile
+still produces a plain, selectable CV without the screen layout.
+
 ## How the PDF works
 
 `npm run pdf` builds the site, serves `dist/`, and drives headless Chrome's

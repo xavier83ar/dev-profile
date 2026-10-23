@@ -39,6 +39,18 @@ export const profile = computed<Profile>(() => ({
   ],
 
   skills: {
+    featured: [
+      { label: "TypeScript", icon: "typescript" },
+      { label: "React", icon: "react" },
+      { label: "Next.js", icon: "next" },
+      { label: "Vue", icon: "vue" },
+      { label: "Node.js", icon: "node" },
+      { label: "NestJS", icon: "nest" },
+      { label: "PostgreSQL", icon: "database" },
+      { label: __("Design systems"), icon: "layers" },
+      { label: __("Embeddable SDKs"), icon: "code" },
+      { label: __("Technical leadership"), icon: "leadership" },
+    ],
     description: __(
       "Although I've been focused on front end and web technologies, " +
       "I would argue that my main strength is versatility, as I worked with an extensive and diverse list " +

@@ -8,6 +8,10 @@
  * with `__()` in the active language, so components never translate it.
  */
 
+/** Configurable symbols for featured skills and section headings. */
+export type GraphicIconName = "typescript" | "react" | "next" | "vue" | "node" | "nest" | "database" | "layers" | "code" | "leadership" | "profile" | "sparkles" | "experience" | "education";
+export type FeaturedSkill = { label: string; icon: GraphicIconName };
+
 /** Glyphs available in Icon.vue. */
 export type IconName =
   | "github"
@@ -116,6 +120,8 @@ export type Profile = {
   /** Three or four sentences, for a hiring manager skimming in eight seconds. */
   summary: string[];
   skills: {
+    /** Curated opening selection; at most ten, in display order. */
+    featured: FeaturedSkill[];
     description: string;
     groups: SkillGroup[];
   };

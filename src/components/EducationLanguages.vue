@@ -6,7 +6,7 @@ defineProps<{ education: Education[]; languages: Language[] }>();
 </script>
 
 <template>
-  <div class="print-stack grid gap-8 sm:grid-cols-2">
+  <div class="education-panels print-stack grid gap-8 sm:grid-cols-2">
     <div>
       <h3 class="mb-3 text-sm font-semibold">{{ __("Education") }}</h3>
       <ul class="space-y-3">
