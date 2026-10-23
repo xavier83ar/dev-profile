@@ -8,16 +8,10 @@
  * with `__()` in the active language, so components never translate it.
  */
 
-/** Glyphs available in Icon.vue. */
-export type IconName =
-  | "github"
-  | "linkedin"
-  | "email"
-  | "phone"
-  | "claude"
-  | "vue"
-  | "tailwind"
-  | "company";
+/** Bootstrap names are inferred from the installed library, without a manual list. */
+import type bootstrapIcons from "bootstrap-icons/font/bootstrap-icons.json";
+export type IconName = keyof typeof bootstrapIcons | `custom:${string}`;
+export type FeaturedSkill = { label: string; icon: IconName };
 
 export type Link = {
   /** Shown as the link text. Printed in full in the PDF. */
@@ -101,7 +95,7 @@ export type Profile = {
   tagline: string;
   location: string;
   /**
-   * Filename of a square portrait in `public/`, resolved against the site base.
+   * Filename of a portrait in `public/`, resolved against the site base.
    * Screen only — it is deliberately kept off the CV, where a photo invites
    * the bias that US hiring convention exists to avoid.
    */
@@ -116,6 +110,8 @@ export type Profile = {
   /** Three or four sentences, for a hiring manager skimming in eight seconds. */
   summary: string[];
   skills: {
+    /** Curated opening selection; at most ten, in display order. */
+    featured: FeaturedSkill[];
     description: string;
     groups: SkillGroup[];
   };

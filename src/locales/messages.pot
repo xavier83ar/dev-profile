@@ -3,7 +3,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Project-Id-Version: dev-profile\n"
 
-#: src/components/ExperienceList.vue:29
+#: src/components/ExperienceList.vue:19
 msgid "%1 logo"
 msgstr ""
 
@@ -19,31 +19,32 @@ msgid_plural "%1 yrs"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/data/profile.ts:264
+#: src/data/profile.ts:276
 msgid "2003 – on hold"
 msgstr ""
 
-#: src/data/profile.ts:265
+#: src/data/profile.ts:277
 msgid "30 subjects completed."
 msgstr ""
 
-#: src/data/profile.ts:223
+#: src/data/profile.ts:235
 msgid "A startup founded with university friends providing web development and hosting to local companies, with clients across gaming, construction and local government."
 msgstr ""
 
-#: src/data/profile.ts:132
+#: src/data/profile.ts:144
 msgid "Agile delivery & refinement"
 msgstr ""
 
-#: src/ProfilePage.vue:33
+#: src/components/SectionNav.vue:10
+#: src/ProfilePage.vue:38
 msgid "AI"
 msgstr ""
 
-#: src/data/profile.ts:141
+#: src/data/profile.ts:153
 msgid "AI is part of how I build software day to day, not a novelty I bolt on."
 msgstr ""
 
-#: src/data/profile.ts:133
+#: src/data/profile.ts:145
 msgid "AI-assisted engineering workflows"
 msgstr ""
 
@@ -51,35 +52,39 @@ msgstr ""
 msgid "Almost 20 years building for the web."
 msgstr ""
 
-#: src/ProfilePage.vue:15
+#: src/ProfilePage.vue:16
 msgid "Almost 20 years building for the web. I own features end to end: design, data model, architecture, API, UI, and the underlying infrastructure."
 msgstr ""
 
-#: src/data/profile.ts:42
+#: src/data/profile.ts:54
 msgid "Although I've been focused on front end and web technologies, I would argue that my main strength is versatility, as I worked with an extensive and diverse list technologies that goes from web stack to desktop and mobile, I touched almost every well known database engine, and I've done infrastructure before DevOps was a thing."
 msgstr ""
 
-#: src/data/profile.ts:255
+#: src/data/profile.ts:267
 msgid "Analista Universitario en Sistemas (Systems Analyst)"
 msgstr ""
 
-#: src/data/profile.ts:146
+#: src/data/profile.ts:158
 msgid "At Pager Health I worked on member-facing conversational agents, first on Dialogflow and later migrated to Google's Agent Development Kit (ADK), with a Python service connecting them to the rest of the platform."
 msgstr ""
 
-#: src/data/profile.ts:161
+#: src/data/profile.ts:173
 msgid "Authored the company's internationalization standard, then implemented it across backend and frontend services, adding Spanish and Portuguese for Latin-American and Brazilian markets."
 msgstr ""
 
-#: src/components/ProfileHeader.vue:43
+#: src/components/ProfileHeader.vue:24
 msgid "Availability"
 msgstr ""
 
-#: src/data/profile.ts:184
+#: src/components/SectionNav.vue:48
+msgid "Back to top"
+msgstr ""
+
+#: src/data/profile.ts:196
 msgid "Built and maintained an embeddable patient SDK, consumed by enterprise health-plan clients."
 msgstr ""
 
-#: src/data/profile.ts:225
+#: src/data/profile.ts:237
 msgid "Built the technical practice from zero (development, hosting and infrastructure) for clients across several industries."
 msgstr ""
 
@@ -91,35 +96,39 @@ msgstr ""
 msgid "Check"
 msgstr ""
 
-#: src/data/profile.ts:142
+#: src/data/profile.ts:154
 msgid "Claude Code is my primary tool for analysis, technical design and implementation — I use it to draft RFCs, review code and work through cross-repo changes, and I'm comfortable writing agent skills and prompt-driven workflows rather than just prompting ad hoc."
 msgstr ""
 
-#: src/data/profile.ts:128
+#: src/data/profile.ts:140
 msgid "Code review at scale"
 msgstr ""
 
-#: src/data/profile.ts:130
+#: src/data/profile.ts:142
 msgid "Cross-team coordination"
 msgstr ""
 
-#: src/data/profile.ts:84
+#: src/data/profile.ts:96
 msgid "Database"
 msgstr ""
 
-#: src/data/profile.ts:238
+#: src/data/profile.ts:250
 msgid "DB Administration of large databases with +100 millions records tables."
 msgstr ""
 
-#: src/data/profile.ts:177
+#: src/data/profile.ts:189
 msgid "Delivered WhatsApp Business as a member communication channel end to end across seven services: Twilio templated messages, configuration UI, routing and agent send flow."
 msgstr ""
 
-#: src/data/profile.ts:61
+#: src/data/profile.ts:50
+msgid "Design systems"
+msgstr ""
+
+#: src/data/profile.ts:73
 msgid "Design systems & component libraries"
 msgstr ""
 
-#: src/data/profile.ts:214
+#: src/data/profile.ts:226
 msgid "Developed complete solutions including: public website, web apps (pwa), mobile apps (android and ios), internal admin tools, backend, api's, databases and the infrastructure that serves them."
 msgstr ""
 
@@ -131,11 +140,16 @@ msgstr ""
 msgid "Education"
 msgstr ""
 
-#: src/ProfilePage.vue:41
+#: src/components/SectionNav.vue:12
+#: src/ProfilePage.vue:46
 msgid "Education & Languages"
 msgstr ""
 
-#: src/data/profile.ts:62
+#: src/data/profile.ts:51
+msgid "Embeddable SDKs"
+msgstr ""
+
+#: src/data/profile.ts:74
 msgid "Embeddable SDKs & widgets"
 msgstr ""
 
@@ -143,27 +157,41 @@ msgstr ""
 msgid "Employer and client work is described on the"
 msgstr ""
 
-#: src/data/profile.ts:272
+#: src/data/profile.ts:284
 msgid "English"
 msgstr ""
 
-#: src/data/profile.ts:231
+#: src/data/profile.ts:243
 msgid "Eniti Media SL (former Cenys Network SL)(extinct)"
 msgstr ""
 
-#: src/data/profile.ts:73
+#: src/data/profile.ts:85
 msgid "Event-driven architecture (GCP Pub/Sub)"
 msgstr ""
 
-#: src/ProfilePage.vue:37
+#: src/components/SectionNav.vue:11
+#: src/ProfilePage.vue:42
 msgid "Experience"
 msgstr ""
 
-#: src/data/profile.ts:274
+#: src/components/ProfileHeader.vue:46
+msgid "Explore all skills"
+msgstr ""
+
+#: src/components/ProfileHeader.vue:19
+msgid "Explore my experience"
+msgstr ""
+
+#: src/components/ProfileHeader.vue:45
+#: src/components/ProfileHeader.vue:46
+msgid "Featured skills"
+msgstr ""
+
+#: src/data/profile.ts:286
 msgid "Five years working in English with a US-based team, written technical design, RFC and architecture review, and daily collaboration."
 msgstr ""
 
-#: src/data/profile.ts:120
+#: src/data/profile.ts:132
 msgid "Flaky-test remediation"
 msgstr ""
 
@@ -171,12 +199,16 @@ msgstr ""
 msgid "for an online version of this document."
 msgstr ""
 
-#: src/data/profile.ts:205
+#: src/data/profile.ts:217
 msgid "Formed when the software-development branch of Linked Comunicaciones merged with Soluciones yPunto, giving the combined company the capacity to take on larger clients."
 msgstr ""
 
-#: src/data/profile.ts:222
+#: src/data/profile.ts:234
 msgid "Founding Partner & CTO"
+msgstr ""
+
+#: src/components/ProfileHeader.vue:34
+msgid "From idea to production"
 msgstr ""
 
 #: src/data/profile.ts:37
@@ -187,7 +219,7 @@ msgstr ""
 msgid "I own features end to end: design, data model, architecture, API, UI, and the underlying infrastructure."
 msgstr ""
 
-#: src/data/profile.ts:209
+#: src/data/profile.ts:221
 msgid "I set technical direction and led delivery."
 msgstr ""
 
@@ -195,7 +227,7 @@ msgstr ""
 msgid "I'm a developer with almost 20 years of experience."
 msgstr ""
 
-#: src/data/profile.ts:145
+#: src/data/profile.ts:157
 msgid "I've also built AI into the product, not just around it."
 msgstr ""
 
@@ -203,27 +235,27 @@ msgstr ""
 msgid "I've had the chance to work with diverse technologies during my career, but most of my experience was building on web technologies, that's why Lead Web Engineer title is what best describes me."
 msgstr ""
 
-#: src/data/profile.ts:131
+#: src/data/profile.ts:143
 msgid "Incident root-cause analysis"
 msgstr ""
 
-#: src/data/profile.ts:97
+#: src/data/profile.ts:109
 msgid "Infrastructure & CI/CD"
 msgstr ""
 
-#: src/data/profile.ts:262
+#: src/data/profile.ts:274
 msgid "Ingeniería en Sistemas de Información — coursework through fifth year"
 msgstr ""
 
-#: src/data/profile.ts:258
+#: src/data/profile.ts:270
 msgid "Intermediate degree of the Information Systems Engineering career."
 msgstr ""
 
-#: src/ProfilePage.vue:14
+#: src/ProfilePage.vue:15
 msgid "Javier Melero — Lead Web Engineer"
 msgstr ""
 
-#: src/data/profile.ts:75
+#: src/data/profile.ts:87
 msgid "JSON Schema contracts"
 msgstr ""
 
@@ -232,23 +264,27 @@ msgid "Languages"
 msgstr ""
 
 #: src/data/profile.ts:14
-#: src/data/profile.ts:164
+#: src/data/profile.ts:176
 msgid "Lead Web Engineer"
 msgstr ""
 
-#: src/data/profile.ts:124
+#: src/data/profile.ts:136
 msgid "Leadership & Practice"
 msgstr ""
 
-#: src/data/profile.ts:168
+#: src/data/profile.ts:180
 msgid "Led web engineering for a provider-search and appointment-scheduling application: authored the provider data-model RFC, implemented it, built the member-facing UI, and provisioned the Cloud Run service, Terraform modules and delivery pipelines to production."
+msgstr ""
+
+#: src/components/ProfileHeader.vue:18
+msgid "Let’s talk"
 msgstr ""
 
 #: src/components/ProjectCard.vue:35
 msgid "Live"
 msgstr ""
 
-#: src/components/ProfileHeader.vue:36
+#: src/components/ProfileHeader.vue:22
 msgid "Location"
 msgstr ""
 
@@ -256,7 +292,7 @@ msgstr ""
 msgid "Made with"
 msgstr ""
 
-#: src/data/profile.ts:232
+#: src/data/profile.ts:244
 msgid "Málaga, Spain / Santo Tomé, Argentina"
 msgstr ""
 
@@ -264,60 +300,67 @@ msgstr ""
 msgid "Meanwhile you can check my github profile."
 msgstr ""
 
-#: src/data/profile.ts:129
+#: src/data/profile.ts:141
 msgid "Mentoring"
 msgstr ""
 
-#: src/data/profile.ts:63
+#: src/data/profile.ts:75
 msgid "Micro-frontend & plugin architectures"
 msgstr ""
 
-#: src/data/profile.ts:173
+#: src/data/profile.ts:185
 msgid "Migrated member and agent video calling from Twilio to the Zoom Video SDK across five services, covering SDK core, embedded widget, agent console, Helm CSP policy and external consumer documentation."
 msgstr ""
 
-#: src/data/profile.ts:93
+#: src/data/profile.ts:105
 msgid "Migrations"
 msgstr ""
 
-#: src/data/profile.ts:147
+#: src/data/profile.ts:159
 msgid "More recently I helped ship an AI-powered search experience for our provider-search product, using Gemini 3.1 Flash Lite as the model behind it."
 msgstr ""
 
-#: src/data/profile.ts:213
+#: src/data/profile.ts:225
 msgid "Moved from public/institutional website projects to complex systems that powered customers business for external and internal users."
 msgstr ""
 
-#: src/data/profile.ts:76
+#: src/data/profile.ts:88
 msgid "Multi-tenancy & data-level tenancy scoping"
 msgstr ""
 
-#: src/data/profile.ts:270
+#: src/data/profile.ts:282
 msgid "Native"
 msgstr ""
 
-#: src/data/profile.ts:248
+#: src/data/profile.ts:260
 msgid "Network administration and configuration at the university's connectivity labs, alongside a research position in a math-applied program."
+msgstr ""
+
+#: src/components/SectionNav.vue:42
+#: src/components/SectionNav.vue:43
+msgid "On this page"
 msgstr ""
 
 #: src/data/profile.ts:23
 msgid "Open to remote roles · Available as an independent contractor"
 msgstr ""
 
-#: src/data/profile.ts:203
+#: src/data/profile.ts:215
 msgid "Partner & CTO"
 msgstr ""
 
+#: src/components/ExperiencePeriod.vue:14
 #: src/lib/dates.ts:22
 msgid "Present"
 msgstr ""
 
-#: src/data/profile.ts:273
+#: src/data/profile.ts:285
 msgid "Professional working proficiency"
 msgstr ""
 
+#: src/components/SectionNav.vue:8
 #: src/components/SiteNav.vue:36
-#: src/ProfilePage.vue:25
+#: src/ProfilePage.vue:30
 msgid "Profile"
 msgstr ""
 
@@ -325,7 +368,7 @@ msgstr ""
 msgid "profile page"
 msgstr ""
 
-#: src/data/profile.ts:233
+#: src/data/profile.ts:245
 msgid "Project Manager"
 msgstr ""
 
@@ -338,27 +381,31 @@ msgstr ""
 msgid "Projects — Javier Melero"
 msgstr ""
 
-#: src/data/profile.ts:226
+#: src/data/profile.ts:238
 msgid "Published reusable components from client work as open source: CakePHP plugins, JavaScript libraries and upstream bug fixes."
 msgstr ""
 
-#: src/data/profile.ts:234
+#: src/data/profile.ts:246
 msgid "Ran the web development department for a Spanish media company, working across two countries."
 msgstr ""
 
-#: src/data/profile.ts:154
+#: src/data/profile.ts:166
 msgid "Remote — US company"
 msgstr ""
 
-#: src/data/profile.ts:72
+#: src/data/profile.ts:84
 msgid "REST API design"
 msgstr ""
 
-#: src/data/profile.ts:127
+#: src/data/profile.ts:139
 msgid "RFCs & written technical design"
 msgstr ""
 
-#: src/data/profile.ts:58
+#: src/components/ProfileHeader.vue:51
+msgid "Scroll to explore"
+msgstr ""
+
+#: src/data/profile.ts:70
 msgid "SCSS / CSS architecture"
 msgstr ""
 
@@ -370,27 +417,28 @@ msgstr ""
 msgid "Selected work and open-source components."
 msgstr ""
 
-#: src/data/profile.ts:107
+#: src/data/profile.ts:119
 msgid "semantic-release & npm package publishing"
 msgstr ""
 
-#: src/data/profile.ts:181
+#: src/data/profile.ts:193
 msgid "Senior Front-end Engineer"
 msgstr ""
 
-#: src/data/profile.ts:237
+#: src/data/profile.ts:249
 msgid "Services optimization for response time under heavy load."
 msgstr ""
 
-#: src/data/profile.ts:212
+#: src/data/profile.ts:224
 msgid "Set technical direction and led delivery for client web projects, taking on engagements larger than either predecessor company had handled alone."
 msgstr ""
 
-#: src/ProfilePage.vue:29
+#: src/components/SectionNav.vue:9
+#: src/ProfilePage.vue:34
 msgid "Skills"
 msgstr ""
 
-#: src/components/ExperienceList.vue:72
+#: src/components/ExperienceList.vue:59
 msgid "Skills:"
 msgstr ""
 
@@ -406,15 +454,15 @@ msgstr ""
 msgid "Source code on GitHub"
 msgstr ""
 
-#: src/data/profile.ts:270
+#: src/data/profile.ts:282
 msgid "Spanish"
 msgstr ""
 
-#: src/data/profile.ts:158
+#: src/data/profile.ts:170
 msgid "Staff Engineer"
 msgstr ""
 
-#: src/data/profile.ts:119
+#: src/data/profile.ts:131
 msgid "Structured logging"
 msgstr ""
 
@@ -426,15 +474,16 @@ msgstr ""
 msgid "Switch to light theme"
 msgstr ""
 
-#: src/data/profile.ts:246
+#: src/data/profile.ts:258
 msgid "Systems Administrator & Research Assistant"
 msgstr ""
 
-#: src/data/profile.ts:126
+#: src/data/profile.ts:138
+#: src/data/profile.ts:52
 msgid "Technical leadership"
 msgstr ""
 
-#: src/data/profile.ts:112
+#: src/data/profile.ts:124
 msgid "Testing & Observability"
 msgstr ""
 
@@ -442,15 +491,15 @@ msgstr ""
 msgid "The last five years I've been working for a US digital-health company where I carried features across every layer they touched: data model, API, interface and the infrastructure underneath."
 msgstr ""
 
-#: src/components/ProfileHeader.vue:39
+#: src/components/ProfileHeader.vue:23
 msgid "Timezone"
 msgstr ""
 
-#: src/data/profile.ts:106
+#: src/data/profile.ts:118
 msgid "Trunk-based development"
 msgstr ""
 
-#: src/data/profile.ts:187
+#: src/data/profile.ts:199
 msgid "US digital-health company building virtual-care products for enterprise health plans and insurers."
 msgstr ""
 
@@ -462,7 +511,7 @@ msgstr ""
 msgid "Work in progress."
 msgstr ""
 
-#: src/data/profile.ts:236
+#: src/data/profile.ts:248
 msgid "Worked with internet ads, marketing campaigns and partner programs, massive e-mail campaigns (millions of e-mails sent per day)."
 msgstr ""
 

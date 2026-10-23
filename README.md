@@ -36,6 +36,48 @@ Clean URLs on GitHub Pages with no SPA-fallback trick, and the PDF pipeline
 points at `index.html` alone — so the portfolio is excluded from the CV
 structurally, not by a print rule that can rot.
 
+## Visual layout
+
+The opening fills at least the first viewport (including the top navigation),
+with a large typographic headline, portrait composition and featured skills.
+On smaller screens and short viewports it grows with its content, so nothing is
+clipped or hidden behind a fixed height.
+
+Edit `profile.skills.featured` in `src/data/profile.ts` to configure up to ten
+skills. Each entry has a `label` and an `icon` using the shared `IconName` type in `src/data/types.ts`.
+The complete skill inventory remains in `skills.groups`.
+
+Neutral light/dark surfaces, electric blue and lime form the screen palette.
+Profile, Skills, AI, Experience and Education each use a distinct composition.
+At widths of 1200px and above, a sticky section menu appears after the hero
+scrolls behind the top bar and tracks the current section.
+
+Experience dates and durations share `ExperiencePeriod.vue`. Screen decoration,
+featured skills and section icons are excluded from print; the same profile
+still produces a plain, selectable CV without the screen layout.
+
+## Icons
+
+All icons render through `src/components/Icon.vue` and are decorative: the
+surrounding link, button or heading provides their accessible label.
+
+- **Bootstrap Icons:** use the library name directly, for example
+  `<Icon name="briefcase" />` or `{ label: "TypeScript", icon: "typescript" }`.
+  Names are checked against the installed package's icon catalog. The icon font
+  and CSS are bundled locally, with no CDN or Bootstrap framework dependency.
+- **Custom SVGs:** put a monochrome SVG in `public/icons/` and use
+  `<Icon name="custom:react" />` for `public/icons/react.svg`. No component or
+  registry changes are needed. CSS masks preserve each file's viewBox and paths,
+  including stroked artwork, while rendering it in the current text color.
+
+Style either source with `color` and `font-size`, for example
+`.my-icon { color: rebeccapurple; font-size: 2rem; }`. The default box is `1em`
+square. Icons are excluded from print, so font glyphs cannot leak into CV text.
+
+The React, Next.js, Vue, Node.js, NestJS and sparkles SVGs were supplied from
+[SVG Icons](https://svgicons.com/). Claude and Tailwind retain the existing
+project marks as standalone SVG files.
+
 ## How the PDF works
 
 `npm run pdf` builds the site, serves `dist/`, and drives headless Chrome's
@@ -145,4 +187,4 @@ than Vue does about my React experience. And because I love Vue.
 
 ## Stack
 
-Vue 3 · TypeScript · Vite · Tailwind CSS v4. No runtime dependencies beyond Vue.
+Vue 3 · TypeScript · Vite · Tailwind CSS v4 · gettext.js · Bootstrap Icons.

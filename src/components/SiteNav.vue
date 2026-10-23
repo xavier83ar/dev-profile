@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import Icon from "./Icon.vue";
 import { useTheme } from "@/composables/useTheme";
 import { useLocale } from "@/composables/useLocale";
 import { computed } from "vue";
@@ -20,8 +21,8 @@ const base = import.meta.env.BASE_URL;
 </script>
 
 <template>
-  <nav class="no-print sticky top-0 z-50 border-b border-line bg-bg/85 backdrop-blur">
-    <div class="mx-auto flex max-w-3xl items-center justify-between gap-4 px-4 py-3 sm:px-8">
+  <nav class="site-nav no-print sticky top-0 z-50 border-b border-line bg-bg/85 backdrop-blur">
+    <div class="site-nav-inner mx-auto flex items-center justify-between gap-2 px-4 py-3 sm:px-8">
       <div class="flex items-center gap-1 text-sm">
         <a
           :href="base"
@@ -67,7 +68,7 @@ const base = import.meta.env.BASE_URL;
           class="rounded-full border border-line px-2.5 py-1.5 text-sm text-muted transition hover:text-text"
           @click="toggle"
         >
-          <span aria-hidden="true">{{ ready && theme === "dark" ? "☀" : "☾" }}</span>
+          <Icon :name="ready && theme === 'dark' ? 'sun' : 'moon'" />
         </button>
 
         <a

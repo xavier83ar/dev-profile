@@ -1,27 +1,17 @@
 <script setup lang="ts">
 import type { Experience } from "@/data/types";
-import { formatDuration, formatRange } from "@/lib/dates";
+import ExperiencePeriod from "@/components/ExperiencePeriod.vue";
 import { __ } from "@/i18n";
 import Icon from "@/components/Icon.vue";
 
 defineProps<{ experience: Experience[] }>();
 
 const base = import.meta.env.BASE_URL;
-
-function companyRange(exp: Experience): string {
-  const roles = exp.roles;
-  return formatRange(roles[roles.length - 1].start, roles[0].end);
-}
-
-function companyDuration(exp: Experience): string | null {
-  const roles = exp.roles;
-  return formatDuration(roles[roles.length - 1].start, roles[0].end);
-}
 </script>
 
 <template>
   <div class="print-compact space-y-8">
-    <article v-for="exp in experience" :key="exp.roles[0].start" class="flex gap-3">
+    <article v-for="exp in experience" :key="exp.roles[0].start" class="experience-entry flex gap-3">
       <div class="shrink-0">
         <img
           v-if="exp.logo"
@@ -33,13 +23,13 @@ function companyDuration(exp: Experience): string | null {
           v-else
           class="no-print flex size-10 items-center justify-center rounded-full bg-accent-deep text-bg text-lg"
         >
-          <Icon name="company" />
+          <Icon name="briefcase" />
         </div>
       </div>
 
       <div class="min-w-0 flex-1">
         <div
-          class="print-keep flex flex-col gap-0.5 sm:flex-row sm:items-baseline sm:justify-between sm:gap-6"
+          class="experience-heading print-keep"
         >
           <h3 class="font-semibold leading-snug">
             <template v-if="exp.roles.length === 1">
@@ -48,10 +38,7 @@ function companyDuration(exp: Experience): string | null {
             </template>
             <template v-else>{{ exp.company }}</template>
           </h3>
-          <p class="shrink-0 text-sm text-subtle">
-            {{ companyRange(exp) }}
-            <template v-if="companyDuration(exp)"> · {{ companyDuration(exp) }} </template>
-          </p>
+          <ExperiencePeriod :start="exp.roles[exp.roles.length - 1].start" :end="exp.roles[0].end" />
         </div>
 
         <p class="text-sm text-subtle">{{ exp.location }}</p>
@@ -69,7 +56,7 @@ function companyDuration(exp: Experience): string | null {
         </ul>
 
         <p v-if="exp.stack?.length" class="print-hide mt-2.5 text-sm text-subtle">
-          <span class="font-medium text-muted">{{ __("Skills:") }} </span>{{ exp.stack.join(", ") }}
+          <span class="mr-1 font-medium text-muted">{{ __("Skills:") }}</span>{{ exp.stack.join(", ") }}
         </p>
 
         <div v-if="exp.roles.length > 1" class="mt-4 space-y-4 border-l border-line pl-4">
@@ -78,15 +65,10 @@ function companyDuration(exp: Experience): string | null {
               class="absolute -left-5 top-1.5 size-2 rounded-full border-2 border-bg bg-accent"
             ></span>
             <div
-              class="print-keep flex flex-col gap-0.5 sm:flex-row sm:items-baseline sm:justify-between sm:gap-6"
+              class="experience-heading print-keep"
             >
               <h4 class="font-medium leading-snug text-text">{{ role.title }}</h4>
-              <p class="shrink-0 text-sm text-subtle">
-                {{ formatRange(role.start, role.end) }}
-                <template v-if="formatDuration(role.start, role.end)">
-                  · {{ formatDuration(role.start, role.end) }}
-                </template>
-              </p>
+              <ExperiencePeriod :start="role.start" :end="role.end" />
             </div>
 
             <p v-if="role.summary" class="mt-1 max-w-3xl text-sm leading-relaxed text-muted">

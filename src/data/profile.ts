@@ -18,7 +18,7 @@ export const profile = computed<Profile>(() => ({
   ),
 
   location: "Santa Fe, Argentina",
-  photo: "profile-photo.jpg",
+  photo: "profile-photo-cutout.png",
   timezone: __("UTC-3 · full overlap with US business hours"),
   availability: __("Open to remote roles · Available as an independent contractor"),
   email: "ricmelero@gmail.com",
@@ -39,6 +39,18 @@ export const profile = computed<Profile>(() => ({
   ],
 
   skills: {
+    featured: [
+      { label: "TypeScript", icon: "typescript" },
+      { label: "React", icon: "custom:react" },
+      { label: "Next.js", icon: "custom:nextjs" },
+      { label: "Vue", icon: "custom:vuejs" },
+      { label: "Node.js", icon: "custom:nodejs" },
+      { label: "NestJS", icon: "custom:nestjs" },
+      { label: "PostgreSQL", icon: "database" },
+      { label: __("Design systems"), icon: "layers" },
+      { label: __("Embeddable SDKs"), icon: "code-slash" },
+      { label: __("Technical leadership"), icon: "people" },
+    ],
     description: __(
       "Although I've been focused on front end and web technologies, " +
       "I would argue that my main strength is versatility, as I worked with an extensive and diverse list " +
