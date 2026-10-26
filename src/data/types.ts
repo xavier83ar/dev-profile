@@ -44,6 +44,8 @@ export type Role = {
    * the further back it is, the less space it earns.
    */
   highlights?: string[];
+  /** Skills associated with this specific title, rather than the whole company. */
+  stack?: string[];
 };
 
 export type Experience = {

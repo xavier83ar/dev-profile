@@ -13,7 +13,7 @@ const base = import.meta.env.BASE_URL;
 
 useDocumentHead(() => ({
   title: __("Projects — Javier Melero"),
-  description: __("Selected projects and open-source work by Javier Melero, lead web engineer."),
+  description: __("Selected projects and open-source work by Javier Melero, staff full-stack engineer."),
 }));
 </script>
 

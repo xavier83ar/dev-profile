@@ -47,6 +47,11 @@ Edit `profile.skills.featured` in `src/data/profile.ts` to configure up to ten
 skills. Each entry has a `label` and an `icon` using the shared `IconName` type in `src/data/types.ts`.
 The complete skill inventory remains in `skills.groups`.
 
+Experience skills can be attached to the company with `experience[].stack` or
+to an individual title with `experience[].roles[].stack`. The latter keeps
+skills associated with the corresponding role when a company has several titles.
+Both appear on screen; the PDF uses the complete Skills section.
+
 Neutral light/dark surfaces, electric blue and lime form the screen palette.
 Profile, Skills, AI, Experience and Education each use a distinct composition.
 At widths of 1200px and above, a sticky section menu appears after the hero

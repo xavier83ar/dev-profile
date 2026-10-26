@@ -306,7 +306,7 @@ h3 {
 
 @page {
   size: A4;
-  margin: 20mm 25mm 15mm;
+  margin: 18mm 22mm 14mm;
 }
 
 @media print {
@@ -365,10 +365,26 @@ h3 {
 
   h1,
   h2,
-  h3 {
+  h3,
+  h4 {
     break-after: avoid;
     page-break-after: avoid;
     color: #000 !important;
+  }
+
+  /* Expanded role descriptions need print rhythm rather than screen leading. */
+  .leading-relaxed {
+    line-height: 1.35 !important;
+  }
+
+  #summary p,
+  #ai p {
+    margin-bottom: 4pt !important;
+  }
+
+  .experience-heading {
+    break-after: avoid;
+    page-break-after: avoid;
   }
 
   .hero-intro { font-size: 17pt; font-weight: 600; }
@@ -396,7 +412,7 @@ h3 {
     text-transform: uppercase;
     border-bottom: 0.5pt solid #000;
     padding-bottom: 2pt;
-    margin: 20pt 0 10pt !important;
+    margin: 12pt 0 6pt !important;
   }
 
   h3 {
@@ -428,6 +444,11 @@ h3 {
      component cannot quietly reintroduce screen spacing into the CV. */
   [class*="space-y-"] > * + * {
     margin-top: 2pt !important;
+  }
+
+  /* Tailwind v4 also puts space-y spacing on the preceding sibling. */
+  [class*="space-y-"] > :not(:last-child) {
+    margin-block-end: 0 !important;
   }
 
   .print-compact > * + * {

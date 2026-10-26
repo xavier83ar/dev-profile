@@ -11,7 +11,12 @@ const base = import.meta.env.BASE_URL;
 
 <template>
   <div class="print-compact space-y-8">
-    <article v-for="exp in experience" :key="exp.roles[0].start" class="experience-entry flex gap-3">
+    <article
+      v-for="exp in experience"
+      :key="exp.company"
+      class="experience-entry flex gap-3"
+      :class="{ 'print-keep': exp.roles.length === 1 }"
+    >
       <div class="shrink-0">
         <img
           v-if="exp.logo"
@@ -84,6 +89,9 @@ const base = import.meta.env.BASE_URL;
                 {{ highlight }}
               </p>
             </div>
+            <p v-if="role.stack?.length" class="print-hide mt-2.5 text-sm text-subtle">
+              <span class="mr-1 font-medium text-muted">{{ __("Skills:") }}</span>{{ role.stack.join(", ") }}
+            </p>
           </div>
         </div>
       </div>
