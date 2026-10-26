@@ -22,7 +22,7 @@ defineProps<{ project: Project }>();
       </li>
     </ul>
 
-    <p class="mt-3 text-sm text-subtle">{{ project.stack.join(", ") }}</p>
+    <p v-if="project.stack.length" class="mt-3 text-sm text-subtle">{{ project.stack.join(", ") }}</p>
 
     <p v-if="project.url || project.repo" class="mt-3 flex flex-wrap gap-4 text-sm">
       <a

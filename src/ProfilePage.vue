@@ -12,7 +12,7 @@ import EducationLanguages from "@/components/EducationLanguages.vue";
 import SiteFooter from "@/components/SiteFooter.vue";
 
 useDocumentHead(() => ({
-  title: __("Javier Melero — Lead Web Engineer"),
+  title: __("Javier Melero — Staff Full-Stack Engineer"),
   description: __("Almost 20 years building for the web. I own features end to end: design, data model, architecture, API, UI, and the underlying infrastructure."),
 }));
 </script>
